@@ -26,17 +26,19 @@ factorial(2)==2^2-2
 </script></div><br/>
 Create graphs of the following functions.
   <h2>Task 2-9</h2>
-<div class="compute"><script type="text/x-sage">
+    <div class="compute"><script type="text/x-sage">
 @interact
 def _(n=[2,3,4,5,6,7,8,9]):
-    V=21; var('x'); 
+    V=21; var('x');
+    x1={2:-50,3:-30,4:-30,5:-30,6:-10,7:-50,8:-30,9:-2}
+    x5={2:50,3:30,4:30,5:30,6:50,7:10,8:30,9:2}
     y={2:abs(V-x)+abs(V+x),3:x^2+V*x-V*abs(x),4:x^2-2*V*abs(x)+V^2,5:(x^2+2*x)*abs(x-V)/(x-V),
        6:x-V-sqrt((x-V)^2),7:abs(x-V)/abs(x+V),8:floor(x+V),9:V^abs(x)-V}
     pretty_print("y=",y[n],"; y'=",y[n].diff(),"; y'=0 ->",solve(y[n].diff(),x))
-    plot(y[n],(x,-50,50),color='#3636ff',fill='axis')\
+    plot(y[n],(x,x1[n],x5[n]),color='#3636ff',fill='axis')\
     .show(gridlines=True,figsize=(7,5))
-    show(table([['x',-50,-21,0,21,50],
-           ['y',y[n](x=-50),y[n](x=-21),y[n](x=0),y[n](x=21),y[n](x=50)]])))
+    show(table([['x',x1[n],-20,0,20,x5[n]],
+           ['y',y[n](x=x1[n]),y[n](x=-20),y[n](x=0),y[n](x=20),y[n](x=x5[n])]]))
 </script></div><br/>
   </body>
 </html>
