@@ -35,8 +35,8 @@ def _(n=[2,3,4,5,6,7,8,9]):
     pretty_print("y=",y[n],"; y'=",y[n].diff(),"; y'=0 ->",solve(y[n].diff(),x))
     plot(y[n],(x,-50,50),color='#3636ff',fill='axis')\
     .show(gridlines=True,figsize=(7,5))
-    table([['x',-50,-21,0,21,50],
-           ['y',y[n](-50),y[n](-21),y[n](0),y[n](21),y[n](50)]])
+    show(table([['x',-50,-21,0,21,50],
+           ['y',y[n](x=-50),y[n](x=-21),y[n](x=0),y[n](x=21),y[n](x=50)]])))
 </script></div><br/>
   </body>
 </html>
