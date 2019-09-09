@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Maths_TF1319_1</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function (){
+    sagecell.makeSagecell({inputLocation:'div.compute',evalButtonText:'Run'});
+    });</script>
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Orbitron');
+  h1, h2 {color:#3636ff; font-family:'Orbitron'; text-shadow:5px 5px 5px #aaa;}
+  p, a {color:darkblue; font-size:120%; text-shadow:5px 5px 5px #aaa;}
+  .sagecell .CodeMirror-scroll {min-height:3em; max-height:38em;}
+  </style>  
+  <body>
+  <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 1</h1>
+  <h2>Task 1</h2>
+      Find out is this expression true or false<br/>
+      (real numbers are indicated by Latin letters).
+      <p>$\exists n \; ( n! = n^2 - n )$</p>
+<div class="compute"><script type="text/x-sage">
+factorial(2)==2^2-2
+</script></div><br/>
+Create graphs of the following functions.
+  <h2>Task 2-9</h2>
+<div class="compute"><script type="text/x-sage">
+V=21; var('x'); y=abs(V-x)+abs(V+x)
+pretty_print("y=",y,"; y'=",y.diff(),"; y'=0 ->",solve(y.diff(),x))
+plot(y,(x,-50,50),color='#3636ff',fill='axis')\
+.show(gridlines=True,figsize=(7,5))
+table([['x',-50,-21,0,21,50],['y',y(-50),y(-21),y(0),y(21),y(50)]])
+</script></div><br/>
+  </body>
+</html>
