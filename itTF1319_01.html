@@ -22,6 +22,10 @@
       <p></p>
 <div class="compute"><script>
 var('k'); f(x,n)=ln(n*x-1)*sum(sqrt(exp(1)^(-k*x)+x^(k-1))/(cos(k*x)+sin(k*x)),k,1,n)
+
+</script></div><br/>
+<div class="compute"><script>
+var('k'); f(x,n)=ln(n*x-1)*sum(sqrt(exp(1)^(-k*x)+x^(k-1))/(cos(k*x)+sin(k*x)),k,1,n)
 l=[[[x,N(f(x,n))] for x in srange(1.1,5,.01)] for n in [2..7]]
 sum([line(l[i-2],color=hue(i/7),legend_label=i) for i in [2..7]])\
 .show(ymin=-300,ymax=300,figsize=10)
