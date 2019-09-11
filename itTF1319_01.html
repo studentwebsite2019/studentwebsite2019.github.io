@@ -25,9 +25,10 @@
         {\cos \ k x + \sin \ k x}}$</p>
 <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">&#x1F300; &nbsp; LaTeX for Mathematics &nbsp;</a>
 <div class="compute"><script>
-# sage
+# sage 
 f(x)=(sin(x*pi/2)+x^(1/5))/(sqrt(abs(cos(pi*x)+1))*exp(1)^sqrt(x))
-a,b=2,3; t=[[N(x),N(f(x))] for x in srange(a,b,(b-a)/10)]; table([['x','f(x)']]+t)
+a,b=2,3; t=[[N(x),N(f(x))] for x in srange(a,b,(b-a)/12)]
+line(t).show(gridlines=True); table([['x','f(x)']]+t)
 </script></div><br/>
 <div class="compute"><script>
 # sage
@@ -39,8 +40,18 @@ table([['x','n','f(x,n)','f(x,n)'],[2,2,f(2,2),f(2,2).n()],[2,3,f(2,3),f(2,3).n(
       [2,4,f(2,4),f(2,4).n()],[2,5,f(2,5),f(2,5).n()],[2,6,f(2,6),f(2,6).n()]])
 </script></div><br/>
 <div class="compute"><script>
-# python / sympy, pylab
-import sympy,pylab
+# python / sympy
+import sympy; from sympy import *
+sympy.init_printing(use_unicode=True)
+x=Symbol('x')
+y=(sin(x*pi/2.)+x^(1/5.))/(sqrt(abs(cos(pi*x)+1.))*exp(1.)^sqrt(x));
+a,b=2.,3.; print('x   ->   f(x)'); print(30*'-')
+for t in srange(a,b,(b-a)/10.):
+    display([t,y.evalf(subs={x:t})]); print(30*'-')
+plot(y,(x,2.05,2.95))
+</script></div><br/>
+<div class="compute"><script>
+# python 
 
 </script></div><br/>
   </body>
