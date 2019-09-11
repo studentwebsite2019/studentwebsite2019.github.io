@@ -4,5 +4,7 @@
 ### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/mathTF1319W.html)
 ### [Standard Calculation. Page 1](https://studentwebsite2019.github.io/mathTF1319_01.html)
 ## IT
+### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/itTF1319W.html)
+### [Standard Calculation. Page 1](https://studentwebsite2019.github.io/itTF1319_01.html)
 ## Physics
 ## Chemistry
