@@ -22,7 +22,9 @@
 <div class="compute"><script type="text/x-sage">
 V=21; var('x,k');
 f1=sum((x+k)^5,k,1,V)/(x^5+V^5)
+f2=(x^V-1)/(x^(V+6)-x)
 pretty_print('expression: ',f1,'; limit (x->oo)= ',limit(f1,x=oo))
+pretty_print('expression: ',f2,'; limit (x->1)= ',limit(f2,x=1))
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 @interact
