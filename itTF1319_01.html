@@ -51,12 +51,17 @@ for t in srange(a,b,(b-a)/10.):
 plot(y,(x,2.05,2.95))
 </script></div><br/>
 <div class="compute"><script>
- python / sympy
+# python / sympy
 import sympy; from sympy import *
 sympy.init_printing(use_unicode=True)
 k,n=symbols('n k',integer=True); x,a,b=symbols('x a b')
 f=lambda x,n: ln(n*x-1)*Sum(sqrt(exp(1)^(-k*x)+x^(k-1))/(cos(k*x)+sin(k*x)),(k,1,n))
-for i in range(2,5): display([2,i,f(2,i).doit(),f(2,i).doit().evalf()])
+for i in range(2,5): 
+    display([2,i,f(2,i).doit(),f(2,i).doit().evalf()])
+p2=plot(f(x,2).doit(),(x,1,5),line_color='#3636ff',ylim=(-200,200),show=False)
+p3=plot(f(x,3).doit(),(x,1,5),line_color='#ff3636',show=False)
+p4=plot(f(x,4).doit(),(x,1,5),line_color='#36ff36',show=False)
+p2.extend(p3); p2.extend(p4); p2.show()
 </script></div><br/>
   </body>
 </html>
