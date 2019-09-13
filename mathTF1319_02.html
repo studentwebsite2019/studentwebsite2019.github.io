@@ -23,8 +23,12 @@
 V=21; var('x,k');
 f1=sum((x+k)^5,k,1,V)/(x^5+V^5)
 f2=(x^V-1)/(x^(V+6)-x)
+f3=(x^2-V^2)/(sqrt(x)-sqrt(V))
+f4=(x^2+2*x-3)/(x^3+4*x^2+3*x)
 pretty_print('expression: ',f1,'; limit (x->oo)= ',limit(f1,x=oo))
 pretty_print('expression: ',f2,'; limit (x->1)= ',limit(f2,x=1))
+pretty_print('expression: ',f3,'; limit (x->V)= ',limit(f3,x=V))
+pretty_print('expression: ',f4,'; limit (x->-3)= ',limit(f3,x=-3))
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 @interact
