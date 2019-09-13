@@ -20,7 +20,9 @@
   <h2>Task 1-5</h2>
   Compute limits.
 <div class="compute"><script type="text/x-sage">
-V=21;
+V=21; var('x,k');
+f1=sum((x+k)^5,k,1,V)/(x^5+V^5)
+pretty_print('expression: ',f1,'; limit (x->oo)= ',limit(f1,x=oo))
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 @interact
