@@ -113,7 +113,13 @@ Highcharts.chart('container2', {
 <div id="container2" style="height:600px; width:600px; margin:0 auto">javascript cell 2 is launching here...</div><br/>
 <div class="compute"><script>
 %%r
-
+svg(filename="Rplots.svg",width=7,height=7,pointsize=12,onefile=T,family="sans",
+    bg="slategray",antialias=c("default","none","gray","subpixel"))
+x<-seq(2.,3.,len=50); y<-(sin(x*pi/2.)+x^(1/5.))/(sqrt(abs(cos(pi*x)+1.))*exp(1.)^sqrt(x))  
+plot(x,y,type='o',cex=0.7,col='#3636ff',xlab='x',ylab='y',xlim=c(2,3),ylim=c(0.05,0.25),
+     fg='white',col.axis='white',col.lab='white')
+cat("x "); cat(round(x[2:10],6)); cat("\n"); cat("y "); cat(round(y[2:10],6)); cat("\n")
+grid(col='white'); dev.off()
 </script></div><br/>
 <div class="compute"><script>
 %%r
