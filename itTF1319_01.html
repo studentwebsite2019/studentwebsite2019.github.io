@@ -76,6 +76,8 @@ Highcharts.chart('container1', {
 });
 </script></div><br/>
 <div id="container1" style="height:600px; width:600px; margin:0 auto">javascript cell 1 is launching here...</div><br/>
+<p>This code cell calls a function which performs a calculation and returns the result:</p>
+<p id="calculation"></p>
 <div class="compute"><script>
 %%javascript
 function myfunction(n,x) {
@@ -85,10 +87,8 @@ function myfunction(n,x) {
 }
 var xy=[["n","x","f(n,x)"]];
 for (i=2; i<7; i++) {xy.push(["<br/>"+i,2,myfunction(i,2)]);
-document.getElementById("demo").innerHTML=xy;};
+document.getElementById("calculation").innerHTML=xy;};
 </script></div><br/>
-<p>This code cell calls a function which performs a calculation and returns the result:</p>
-<p id="demo"></p>
 <div class="compute"><script>
 %%javascript
 var xy2 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(2*0.1*(x+r)-1)]);
