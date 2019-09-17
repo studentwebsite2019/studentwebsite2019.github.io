@@ -78,6 +78,19 @@ Highcharts.chart('container1', {
 <div id="container1" style="height:600px; width:600px; margin:0 auto">javascript cell 1 is launching here...</div><br/>
 <div class="compute"><script>
 %%javascript
+function myfunction(n,x) {
+  var i; var sum=0;
+  for (i=1; i<n+1; i++) {sum+=Math.sqrt(Math.pow(Math.E,-i*x)+Math.pow(x,i-1))/(Math.cos(i*x)+Math.sin(i*x));};
+  return sum*Math.log(n*x-1);
+}
+var xy=[["n","x","f(n,x)"]];
+for (i=2; i<7; i++) {xy.push(["<br/>"+i,2,myfunction(i,2)]);
+document.getElementById("demo").innerHTML=xy;};
+</script></div><br/>
+<p>This code cell calls a function which performs a calculation and returns the result:</p>
+<p id="demo"></p>
+<div class="compute"><script>
+%%javascript
 var xy2 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(2*0.1*(x+r)-1)]);
 var xy3 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(3*0.1*(x+r)-1)]);
 var xy4 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(4*0.1*(x+r)-1)]);
