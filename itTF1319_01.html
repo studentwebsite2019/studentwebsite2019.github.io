@@ -66,10 +66,11 @@ p2.extend(p3); p2.extend(p4); p2.show()
 </script></div><br/>
 <div class="compute"><script>
 %%javascript
-var xy=Array(100).fill(200).map((r,x) => [(0.01*(x+r)),(Math.sin(0.01*(x+r)*Math.PI/2)+Math.pow(x,0.2))]);
+var xy=Array(10).fill(20).map((r,x) => [(0.1*(x+r)),
+(Math.sin(0.05*(x+r)*Math.PI)+Math.pow(0.1*(x+r),0.2)/(Math.sqrt(Math.abs(Math.cos(Math.PI*0.1*(x+r))+1))*Math.pow(Math.E,Math.sqrt(0.1*(x+r)))))]);
 Highcharts.chart('container1', {
     chart:{type:'area'},xAxis:{title:{text:'x'}},yAxis:{title:{text:'y'}},
-    title:{text:'Parametric Area Plot'},credits:{enabled:false},
+    title:{text:'Area Plot'},credits:{enabled:false},
     series: [{name:'f(x)',color:'#3636ff',data:xy}]
 });
 </script></div><br/>
