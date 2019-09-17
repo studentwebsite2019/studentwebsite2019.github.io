@@ -67,10 +67,10 @@ p2.extend(p3); p2.extend(p4); p2.show()
 <div class="compute"><script>
 %%javascript
 var xy=Array(10).fill(20).map((r,x) => [(0.1*(x+r)),
-(Math.sin(0.05*(x+r)*Math.PI)+Math.pow(0.1*(x+r),0.2)/(Math.sqrt(Math.abs(Math.cos(Math.PI*0.1*(x+r))+1))*Math.pow(Math.E,Math.sqrt(0.1*(x+r)))))]);
+((Math.sin(0.05*(x+r)*Math.PI)+Math.pow(0.1*(x+r),1/5))/(Math.sqrt(Math.abs(Math.cos(Math.PI*0.1*(x+r))+1))*Math.pow(Math.E,Math.sqrt(0.1*(x+r)))))]);
 Highcharts.chart('container1', {
-    chart:{type:'area'},xAxis:{title:{text:'x'}},yAxis:{title:{text:'y'}},
-    title:{text:'Area Plot'},credits:{enabled:false},
+    chart:{type:'line'},xAxis:{title:{text:'x'}},yAxis:{title:{text:'y'}},
+    title:{text:'Line Plot'},credits:{enabled:false},
     series: [{name:'f(x)',color:'#3636ff',data:xy}]
 });
 </script></div><br/>
