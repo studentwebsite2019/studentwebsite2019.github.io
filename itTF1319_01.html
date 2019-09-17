@@ -76,10 +76,13 @@ Highcharts.chart('container1', {
 });
 </script></div><br/>
 <div id="container1" style="height:600px; width:600px; margin:0 auto">javascript cell 1 is launching here...</div><br/>
-<p>This code cell calls a function which performs a calculation and returns the result:</p>
-<p id="calculation"></p>
 <div class="compute"><script>
-%%javascript
+%%html
+<style>@import url('https://fonts.googleapis.com/css?family=Roboto|Miss Fajardose');</style>
+<p style="background-color:white; color:#3636ff; font-family:Miss Fajardose; font-size:300%;">
+The code cell calls a function which performs a calculation and returns the result:</p>
+<p id="calculation" width=600 style="background-color:silver; color:#3636ff; font-family:Roboto; font-size:200%;"></p>
+<script>
 function myfunction(n,x) {
   var i; var sum=0;
   for (i=1; i<n+1; i++) {sum+=Math.sqrt(Math.pow(Math.E,-i*x)+Math.pow(x,i-1))/(Math.cos(i*x)+Math.sin(i*x));};
