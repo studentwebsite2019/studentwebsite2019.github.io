@@ -123,7 +123,20 @@ grid(col='white'); dev.off()
 </script></div><br/>
 <div class="compute"><script>
 %%r
-
+svg(filename="Rplots.svg",width=7,height=7,pointsize=12,onefile=T,family="sans",
+    bg="slategray",antialias=c("default","none","gray","subpixel"))
+f<-function(n,x) {
+  s=0; for(i in 1:n) {s<-s+sqrt(exp(1)^(-i*x)+x^(i-1))/(cos(i*x)+sin(i*x))};
+  return(s*log(n*x-1));
+}
+x<-seq(1,5,len=47); y2<-f(2,x); y3<-f(3,x); y4<-f(4,x)
+plot(x,y2,type='o',cex=0.7,col='#3636ff',xlim=c(1,5),ylim=c(-150,150),xlab='',ylab=''); par(new=T); 
+plot(x,y3,type='o',cex=0.7,col='#ff3636',xlim=c(1,5),ylim=c(-150,150),xlab='',ylab=''); par(new=T);
+plot(x,y4,type='o',cex=0.7,col='#36ff36',xlab='x',ylab='y',xlim=c(1,5),ylim=c(-150,150),
+     fg='white',col.axis='white',col.lab='white');
+cat("x      "); cat(round(x[2:11],6)); cat("\n"); cat("f(2,x) "); cat(round(y2[2:11],6)); cat("\n"); 
+cat("f(3,x) "); cat(round(y3[2:11],6)); cat("\n"); cat("f(4,x) "); cat(round(y4[2:11],6)); cat("\n")
+grid(col='white'); dev.off()
 </script></div><br/>
   </body>
 </html>
