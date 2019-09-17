@@ -95,14 +95,19 @@ document.getElementById("calculation").innerHTML=xy;};
 </script></div><br/>
 <div class="compute"><script>
 %%javascript
-var xy2 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(2*0.1*(x+r)-1)]);
-var xy3 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(3*0.1*(x+r)-1)]);
-var xy4 = Array(40).fill(10).map((r,x) => [0.1*(x+r),Math.log(4*0.1*(x+r)-1)]);
+function myfunction(n,x) {
+  var i; var sum=0;
+  for (i=1; i<n+1; i++) {sum+=Math.sqrt(Math.pow(Math.E,-i*x)+Math.pow(x,i-1))/(Math.cos(i*x)+Math.sin(i*x));};
+  return sum*Math.log(n*x-1);
+}
+var xy2 = Array(30).fill(10).map((r,x) => [0.1*(x+r),myfunction(2,0.1*(x+r))]);
+var xy3 = Array(30).fill(10).map((r,x) => [0.1*(x+r),myfunction(3,0.1*(x+r))]);
+var xy4 = Array(30).fill(10).map((r,x) => [0.1*(x+r),myfunction(4,0.1*(x+r))]);
 Highcharts.chart('container2', {
     chart:{type:'line'},xAxis:{title:{text:'x'}},yAxis:{title:{text:'y'}},
     title:{text:'Line Plot'},credits:{enabled:false},
-    series: [{name:'n=2',color:'#ff3636',data:xy2},
-             {name:'n=3',color:'#3636ff',data:xy3},{name:'n=4',color:'#36ff36',data:xy4}]
+    series: [{name:'n=2',color:'#ff3636',data:xy2},{name:'n=3',color:'#3636ff',data:xy3},
+             {name:'n=4',color:'#36ff36',data:xy4}]
 });
 </script></div><br/>
 <div id="container2" style="height:600px; width:600px; margin:0 auto">javascript cell 2 is launching here...</div><br/>
