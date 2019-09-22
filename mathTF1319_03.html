@@ -75,10 +75,18 @@ import sympy; from sympy import *
 </script></div><br/>
   <h2>Task 7-8</h2>
 <div class="compute"><script type="text/x-sage">
+set_verbose(-1)
 #7->15.21
-
+var('a,h,x'); f7(a,h,x)=(a^(x+h)+a^(x-h)-2*a^x)/h^2
+pretty_print(html("<p>$\lim_{h → 0}"+str(latex(f7(a,h,x)))+"="+str(limit(f7(a,h,x),h=0))+"$</p>"))
+plot([f7(2,.00001,x),f7(2,1,x)],(-1,1),
+     legend_label=['a=2,h=0.00001','a=2,h=1']).show()
 #8->16.21
-
+f8=(6-5/cos(x))^(cot(x)^2)
+pretty_print(html("<p>$\lim_{x → 0}"+str(latex(f8))+"="+\
+                  str(limit(f8,x=0))+"="+str(limit(f8,x=0).n())+"$</p>"))
+plot(f8,(-2,2),ymin=-.5,ymax=2.5,gridlines=True)+\
+plot(limit(f8,x=0),(-2,2),color='red',linestyle='-.',thickness=2)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 import sympy; from sympy import *
