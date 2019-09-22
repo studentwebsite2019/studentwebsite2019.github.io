@@ -37,9 +37,18 @@ import sympy; from sympy import *
   <h2>Task 3-4</h2>
 <div class="compute"><script type="text/x-sage">
 #3->11.21
-
+set_verbose(-1)
+var('x'); f3=(1-sqrt(cos(x)))/(x*sin(x))
+pretty_print(html("<p>$\lim_{x → 0}"+str(latex(f3))+"="+\
+                  str(limit(f3,x=0))+"="+str(limit(f3,x=0).n())+"$</p>"))
+(plot(f3,(-3*pi,3*pi),ymin=-.4,ymax=.8,gridlines=True)+
+ plot(limit(f3,x=0),(-3*pi,3*pi),color='red',linestyle='-.',thickness=2)).show()
 #4->12.21
-
+f4=(1-2^(4-x^2))/(2*(sqrt(2*x)-sqrt(3*x^2-5*x+2)))
+pretty_print(html("<p>$\lim_{x → 2}"+str(latex(f4))+"="+\
+                  str(limit(f4,x=2))+"="+str(limit(f4,x=2).n())+"$</p>"))
+plot(f4,(0,3),ymin=-15,ymax=15,gridlines=True)+\
+plot(limit(f4,x=2),(0,3),color='red',linestyle='-.',thickness=2)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 import sympy; from sympy import *
