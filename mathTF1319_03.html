@@ -20,7 +20,14 @@
   <h2>Task 1-2</h2>
   Compute limits.
 <div class="compute"><script type="text/x-sage">
-
+var('x'); f1=sin(5*x)/tan(3*x)
+pretty_print(html("<p>$\lim_{x → \pi}"+str(latex(f1))+"="+str(limit(f1,x=pi))+"$</p>"))
+(plot(f1,(-2*pi,2*pi),ymin=-3,ymax=3,gridlines=True)+
+ plot(limit(f1,x=pi),(-2*pi,2*pi),color='red',linestyle='-.',thickness=2)).show()
+f2=(cos(x)-sin(x))^3/(1-sin(5*x))
+pretty_print(html("<p>$\lim_{x → \pi/4}"+str(latex(f2))+"="+str(limit(f2,x=pi/4))+"$</p>"))
+plot(f2,(-2*pi,2*pi),ymin=-3,ymax=3,gridlines=True)+\
+plot(limit(f2,x=pi/4),(-2*pi,2*pi),color='red',linestyle='-.',thickness=2)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 import sympy; from sympy import *
