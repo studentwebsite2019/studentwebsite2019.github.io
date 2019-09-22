@@ -79,8 +79,10 @@ set_verbose(-1)
 #7->15.21
 var('a,h,x'); f7(a,h,x)=(a^(x+h)+a^(x-h)-2*a^x)/h^2
 pretty_print(html("<p>$\lim_{h → 0}"+str(latex(f7(a,h,x)))+"="+str(limit(f7(a,h,x),h=0))+"$</p>"))
-plot([f7(2,.00001,x),f7(2,1,x)],(-1,1),gridlines=True,
-     legend_label=['a=2,h=0.00001','a=2,h=1']).show()
+(plot([f7(2,1,x),f7(2,.00001,x)],(-1,1),gridlines=True,thickness=2,
+      legend_label=['a=2, h=1','a=2, h=.00001'],color=['darkblue','purple'])+
+ plot(limit(f7(2,h,x),h=0),(-1,1),thickness=7,alpha=.3,
+      color='red',legend_label=str(limit(f7(2,h,x),h=0)))).show()
 #8->16.21
 f8=(6-5/cos(x))^(cot(x)^2)
 pretty_print(html("<p>$\lim_{x → 0}"+str(latex(f8))+"="+\
