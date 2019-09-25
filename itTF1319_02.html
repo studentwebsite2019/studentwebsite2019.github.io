@@ -34,8 +34,11 @@ pretty_print('number summation \n'); pretty_print(X2,sum_arr(X2))
 </script></div><br/>
 <div class="compute"><script>
 # sage / task 2
-
-</script></div><br/>
+var('D,G,i,N'); Vi(D,i)=4/3*pi*((D+i)/2)^3-4/3*pi*((D+i-1)/2)^3
+v(D,i)=Vi(D,i).expand().simplify().factor()
+pretty_print('volume of the i-th layer: \n'); pretty_print(v(D,i))
+P(D,N)=sum(v(D,i)*G/i,i,1,N)
+pretty_print('total weight of N layers: \n'); pretty_print(P(D,N).factor())</script></div><br/>
 <div class="compute"><script>
 # python / task 1
 
