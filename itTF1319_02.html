@@ -37,8 +37,15 @@ pretty_print('number summation \n'); pretty_print(X2,sum_arr(X2))
 var('D,G,i,N'); Vi(D,i)=4/3*pi*((D+i)/2)^3-4/3*pi*((D+i-1)/2)^3
 v(D,i)=Vi(D,i).expand().simplify().factor()
 pretty_print('volume of the i-th layer: \n'); pretty_print(v(D,i))
-P(D,N)=sum(v(D,i)*G/i,i,1,N)
-pretty_print('total weight of N layers: \n'); pretty_print(P(D,N).factor())</script></div><br/>
+P(D,N,G)=sum(v(D,i)*G/i,i,1,N)
+pretty_print('total weight of N layers: \n'); pretty_print(P(D,N,G).factor())
+from sage.plot.plot3d.shapes import Sphere
+def display_shell(D,G,N):
+    g=Graphics(); s=Sphere(D,color='gray',frame=false)
+    layers=sum([Sphere(D+i,opacity=G/i) for i in [1..N]])
+    pretty_print('D=%d, N=%d, G=%.2f -> P=%f'%(D,N,G,P(D,N,G))) 
+    (g+s+layers).show()
+display_shell(7,.75,10)
 <div class="compute"><script>
 # python / task 1
 
