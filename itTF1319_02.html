@@ -81,12 +81,17 @@ task 1: the javascript cell 1 is launching here...</div>
 </script></div><br/>
 <div class="compute"><script>
 %%html
-<div id="container2" style="height:400px; width:400px; margin:0 auto">
-task 2: the javascript cell 2 is launching here...</div>
+<style>@import url('https://fonts.googleapis.com/css?family=Ewert&effect=ice');</style>
+<p class='font-effect-ice' style='font-size:200%;'>total gravity of N=10 layers for D=7 and G=0.75:</p>
+<button id='cell2' class='font-effect-ice' style='font-family:Ewert; font-size:300%;'
+onclick='document.getElementById("cell2").innerHTML=P(7,0.75,10);'>click >>></button>
 </script></div><br/>
 <div class="compute"><script>
 %%javascript
-
+function Pn(D,G,n) {
+    return (4/3*Math.PI*Math.pow((D+n)/2,3)-4/3*Math.PI*Math.pow((D+n-1)/2,3))*G/n;}
+function P(D,G,N) {
+    var n,D,G,N; var s=Pn(D,G,1); for (n=2; n<N+1; n++) {s=s+Pn(D,G,n)}; return s};
 </script></div><br/>
 <div class="compute"><script>
 %%r
