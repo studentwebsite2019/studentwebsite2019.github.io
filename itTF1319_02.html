@@ -91,7 +91,13 @@ task 2: the javascript cell 2 is launching here...</div>
 <div class="compute"><script>
 %%r
 # task 1
-
+X1<-c("♔","♕","♖","♗","♘","♙"); T1<-X1[1]
+for(i in 2:length(X1)) {T1[i]<-paste(c(T1[i-1],X1[i]),collapse="")}
+cat(c("string summation \n",X1,"->",T1,"\n"))
+X2<-sample(1:99,10); T2<-X2[1]
+for(i in 2:length(X2)) {T2[i]<-T2[i-1]+X2[i]}
+cat(c("number summation \n",X2,"->",T2,"\n"))
+T2[length(X2)]==sum(X2)
 </script></div><br/>
 <div class="compute"><script>
 %%r
