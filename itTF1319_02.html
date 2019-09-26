@@ -70,14 +70,23 @@ def P(D,G,N):
     return s
 print('total gravity of 10 layers for D=7 and G=0.75:'); print(P(7,.75,10))
 </script></div><br/>
+HTML & JavaScript / Task 1
 <div class="compute"><script>
 %%html
-<div id="container1" style="height:400px; width:400px; margin:0 auto">
-task 1: the javascript cell 1 is launching here...</div>
-</script></div><br/>
-<div class="compute"><script>
-%%javascript
-
+<style>@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto&effect=3d');</style>
+<p class='font-effect-3d' style='color:crimson; font-family:Monoton; font-size:200%;'>string summation</p>
+<button id='cell11' class='font-effect-3d' style='color:crimson; font-family:Roboto; font-size:150%;'
+onclick='document.getElementById("cell11").innerHTML=result1()'>click >>></button>
+<p class='font-effect-3d' style='color:darkblue; font-family:Monoton; font-size:200%;'>number summation</p>
+<button id='cell12' class='font-effect-3d' style='color:darkblue; font-family:Roboto; font-size:150%;'
+onclick='document.getElementById("cell12").innerHTML=result2()'>click >>></button>
+<script>
+X1=["♔","♕","♖","♗","♘","♙"]; T1=[X1[0]];
+var n; for (n=1; n<X1.length; n++) {T1[n]=T1[n-1].concat(X1[n])};
+function result1() {return X1.join().concat(" -> ").concat(T1.join());}
+X2=[1,54,32,7,16,8,25]; T2=[X2[0]];
+var n; for (n=1; n<X2.length; n++) {T2[n]=T2[n-1]+X2[n]};
+function result2() {return X2.toString().concat(" -> ").concat(T2.toString());}
 </script></div><br/>
 HTML & JavaScript / Task 2
 <div class="compute"><script>
