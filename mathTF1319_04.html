@@ -45,7 +45,12 @@ limit(f,x=0)
   <h2>Task 3</h2>
 Find breakpoints and make the function continuous, if it is possible.
 <div class="compute"><script type="text/x-sage">
-
+# sage
+set_verbose(-1); var('x'); f=5^(x/(1-x^2))
+pretty_print('f(x)=%s'%str(f)) 
+pretty_print('limit f(x) (x->-1), left & right - %s & %s)'%(limit(f,x=-1,dir='left'),limit(f,x=-1,dir='right')))
+pretty_print('limit f(x) (x->1), left & right - %s & %s)'%(limit(f,x=1,dir='left'),limit(f,x=1,dir='right')))
+plot(f,(-3,3),ymax=5,gridlines=True).show()
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 
