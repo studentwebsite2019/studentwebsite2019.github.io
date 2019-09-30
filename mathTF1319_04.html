@@ -33,7 +33,11 @@ sum([plot(g1(b,x),(0,10),legend_label='b=%d'%b,color=hue(b/44)) for b in [7,14..
   <h2>Task 2</h2>
 Find breakpoints and make the function continuous, if it is possible.
 <div class="compute"><script type="text/x-sage">
-
+# sage
+set_verbose(-1); var('x'); f(x)=(2^cos(x)-2)/(3^(x^2)-1)
+pretty_print('f(x)=%s if x≠0, f(x)=%f if x=0'%(str(f),limit(f,x=0)))
+plot(f(x),(-pi,pi),gridlines=True).show()
+limit(f,x=0)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 
