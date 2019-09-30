@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Maths_TF1319_4</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function (){
+    sagecell.makeSagecell({inputLocation:'div.compute',evalButtonText:'Run'});
+    });</script>
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Orbitron');
+  h1, h2 {color:#3636ff; font-family:'Orbitron'; text-shadow:5px 5px 5px #aaa;}
+  p, a {color:darkblue; font-size:120%; text-shadow:5px 5px 5px #aaa;}
+  .sagecell .CodeMirror-scroll {min-height:3em; max-height:38em;}
+  </style>  
+  <body>
+  <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 4</h1>
+  <h2>Task 1</h2>
+At what ratio of parameters a and b will the function f(x) be continuous?
+<div class="compute"><script type="text/x-sage">
+# sage
+set_verbose(-1); var('x,a,b'); V=21 
+f1(a,x)=a*(x+V); g1(b,x)=(x-V)^2+b*x
+pretty_print('x<0:%s'%(str(f1),str(g1)))
+(plot(f1(1,x),(-10,0),gridlines=True)+plot(g1(1,x),(0,10))).show()
+</script></div><br/>
+<div class="compute"><script type="text/x-sage">
+
+</script></div><br/>
+  <h2>Task 2</h2>
+Find breakpoints and make the function continuous, if it is possible.
+<div class="compute"><script type="text/x-sage">
+
+</script></div><br/>
+<div class="compute"><script type="text/x-sage">
+
+</script></div><br/>
+  <h2>Task 3</h2>
+Find breakpoints and make the function continuous, if it is possible.
+<div class="compute"><script type="text/x-sage">
+
+</script></div><br/>
+<div class="compute"><script type="text/x-sage">
+
+</script></div><br/>
+  </body>
+</html>
