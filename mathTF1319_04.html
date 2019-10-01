@@ -47,7 +47,11 @@ plot(f(x),(-pi,pi),gridlines=True).show()
 limit(f,x=0)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
-
+# python / sympy
+import sympy as sp; sp.symbols('x'); f(x)=(2^cos(x)-2)/(3^(x^2)-1)
+sp.pretty_print('f(x)=%s if x≠0, f(x)=%f if x=0'%(str(f),sp.limit(f,x,0)))
+sp.plot(f(x),(x,-sp.pi,sp.pi),gridlines=True)
+sp.limit(f,x,0)
 </script></div><br/>
   <h2>Task 3</h2>
 Find breakpoints and make the function continuous, if it is possible.
