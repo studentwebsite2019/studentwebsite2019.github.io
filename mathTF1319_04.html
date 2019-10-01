@@ -59,7 +59,14 @@ plot(f,(-3,3),ymax=5,gridlines=True).show()
 Find asymptotes and create function graphs
 <div class="compute"><script type="text/x-sage">
 # sage #6.21
-
+var('x'); f=(x^3-2*x^2-3*x+2)/(1-x^2); pretty_print('f(x)=%s'%str(f)) 
+pretty_print('1-x^2≠0 => x≠-1 or x≠1'); pretty_print('y=kx+b: k=-1,b=2')
+print([limit(f,x=-1,dir='+'),limit(f,x=-1,dir='-'),
+       limit(f,x=1,dir='+'),limit(f,x=1,dir='-'),
+       limit(f/x,x=oo), limit(f-(limit(f/x,x=oo))*x,x=oo)])
+plot(f,(-3,3),ymin=-5,ymax=5,gridlines=True,detect_poles=True)+\
+sum([line([[i,-5],[i,5]],color='red',linestyle='-.') for i in [-1,1]])+\
+plot(-1*x+2,(-3,3),color='red',linestyle='-.')
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 
