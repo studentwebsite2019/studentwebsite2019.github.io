@@ -29,10 +29,11 @@ sum([plot(g1(b,x),(0,10),legend_label='b=%d'%b,color=hue(b/44)) for b in [7,14..
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy
-import sympy as sp; sp.symbols('x,a,b')
-V=21; f1(a,x)=a*(x+V); g1(b,x)=(x-V)^2+b
-sp.pretty_print('x<0:%s, x>0:%s'%(str(f1),str(g1)))
-sp.pretty_print(solve(f1(a,0)-g1(b,0),a))
+import sympy as sp; V=21; x,a,b=sp.symbols('x,a,b')
+def f1(a,x): return a*(x+V)
+def g1(b,x): return (x-V)**2+b
+sp.pretty_print('x<0:%s, x>0:%s'%(str(f1(a,x)),str(g1(b,x))))
+sp.pretty_print(sp.solve(f1(a,0)-g1(b,0),a))
 p1=sp.plot(f1(22,x),(x,-10,0),show=False)
 p2=sp.plot(g1(21,x),(x,0,10),show=False)
 p1.extend(p2); p1.show()
@@ -48,10 +49,10 @@ limit(f,x=0)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy
-import sympy as sp; sp.symbols('x'); f(x)=(2^cos(x)-2)/(3^(x^2)-1)
-sp.pretty_print('f(x)=%s if x≠0, f(x)=%f if x=0'%(str(f),sp.limit(f,x,0)))
-sp.plot(f(x),(x,-sp.pi,sp.pi),gridlines=True)
-sp.limit(f,x,0)
+import sympy as sp; x=sp.symbols('x'); 
+def f(x): return (2**sp.cos(x)-2)/(3**(x**2)-1)
+sp.pretty_print('f(x)=%s if x≠0, f(x)=%f if x=0'%(str(f(x)),sp.limit(f(x),x,0)))
+sp.plot(f(x),(x,-sp.pi,sp.pi)); sp.limit(f(x),x,0)
 </script></div><br/>
   <h2>Task 3</h2>
 Find breakpoints and make the function continuous, if it is possible.
