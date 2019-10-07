@@ -45,8 +45,8 @@ print('max: %f, min: %f, difference: %f'%diff_abs(A))
 <div class="compute"><script>
 # python / task 2
 import random
-X=[random.random()*100 for i in range(20)]; print(X)
-Y=[random.random()*100 for i in range(20)]; print(Y)
+X=[round(random.random()*100-50) for i in range(20)]; print(X)
+Y=[round(random.random()*100-50) for i in range(20)]; print(Y)
 def replace_el(X,Y):
     Z=[]; i,c=0,0
     for x in X:
@@ -55,7 +55,7 @@ def replace_el(X,Y):
             Z.append(Y[i]); c+=1
         i+=1
     return Z,c
-print('result: \n'); print(replace_el(X,Y))
+print('\nresult: \n'); print(replace_el(X,Y))
 </script></div><br/>
 HTML & JavaScript / Task 1
 <div class="compute"><script>
