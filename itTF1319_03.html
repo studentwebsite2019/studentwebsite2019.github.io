@@ -32,14 +32,15 @@
 <div class="compute"><script>
 # python / task 1
 import random
-A=[random.randint(1,99) for i in range(100)]
+A=[round(random.random()*100-50,2) for i in range(20)]
+print(A)
 def diff_abs(X):
     minabs,maxabs=10**20,-10**20
     for x in X:
         if abs(x)<minabs: minabs=abs(x)
         if abs(x)>maxabs: maxabs=abs(x)    
-    return maxabs-minabs
-print('difference: %f'%diff_abs(A))
+    return maxabs,minabs,maxabs-minabs
+print('max: %f, min: %f, difference: %f'%diff_abs(A))
 </script></div><br/>
 <div class="compute"><script>
 # python / task 2
