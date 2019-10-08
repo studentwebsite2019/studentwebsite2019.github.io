@@ -88,7 +88,8 @@ var minabs=Math.pow(10,20); var maxabs=0;
 for (var n=1; n<A.length; n++) {
     if (Math.abs(A[n])<minabs) {minabs=Math.abs(A[n])};
     if (Math.abs(A[n])>maxabs) {maxabs=Math.abs(A[n])}};
-function result2() {return [maxabs.toString(),minabs.toString(),(maxabs-minabs).toString()];}
+function result2() {return [maxabs.toString(),minabs.toString(),
+                            (Math.round((maxabs-minabs)*100)/100).toString()];}
 </script></div><br/>
 HTML & JavaScript / Task 2
 <div class="compute"><script>
