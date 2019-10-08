@@ -74,7 +74,21 @@ print('\nresult: \n'); print(replace_el(X,Y))
 HTML & JavaScript / Task 1
 <div class="compute"><script>
 %%html
-
+<style>@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto&effect=3d');</style>
+<p class='font-effect-3d' style='color:darkgreen; font-family:Monoton; font-size:200%;'>array A</p>
+<button id='cell11' class='font-effect-3d' style='color:darkgreen; font-family:Roboto; font-size:110%;'
+onclick='document.getElementById("cell11").innerHTML=result1()'>click >>></button>
+<p class='font-effect-3d' style='color:darkgreen; font-family:Monoton; font-size:200%;'>max, min, and difference</p>
+<button id='cell12' class='font-effect-3d' style='color:darkgreen; font-family:Roboto; font-size:110%;'
+onclick='document.getElementById("cell12").innerHTML=result2()'>click >>></button>
+<script>
+A=Array.from({length:20},()=>Math.round(Math.random()*10000-5000)/100);
+function result1() {return A.toString();}
+var minabs=Math.pow(10,20); var maxabs=0;
+for (var n=1; n<A.length; n++) {
+    if (Math.abs(A[n])<minabs) {minabs=Math.abs(A[n])};
+    if (Math.abs(A[n])>maxabs) {maxabs=Math.abs(A[n])}};
+function result2() {return [maxabs.toString(),minabs.toString(),(maxabs-minabs).toString()];}
 </script></div><br/>
 HTML & JavaScript / Task 2
 <div class="compute"><script>
