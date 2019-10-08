@@ -106,8 +106,7 @@ X=Array.from({length:20},()=>Math.round(Math.random()*10000-5000)/100);
 Y=Array.from({length:20},()=>Math.round(Math.random()*10000-5000)/100);
 function result21() {return 'X => '+X.toString()+'</br>Y => '+Y.toString();}
 var Z=[]; var c=0;
-for (var n=0; n<X.length; n++) {
-    if (X[n]>0) {Z[n]=X[n]} else {Z[n]=Y[n]; c++};}
+for (var n=0; n<X.length; n++) {if (X[n]>0) {Z[n]=X[n]} else {Z[n]=Y[n]; c++};}
 function result22() {return 'result => '+Z.toString()+'</br>number of replacements => '+c.toString();}
 </script></div><br/>
 <div class="compute"><script>
