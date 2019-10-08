@@ -20,10 +20,16 @@
   <h2>Tasks 6.21-6.51</h2>
   Compute derivatives.
 <div class="compute"><script type="text/x-sage">
-
+var('x')
+f=[3-2*x+2/3*x^4]
+df=[diff(y,x) for y in f]
+@interact
+def _(n=range(5)):
+    pretty_print("6."+str(21+2*n)+": y="+str(f[n])+"; y'="+str(df[n]))
+    plot([f[n],df[n]],(x,-3,3),legend_label='automatic',gridlines=True).show()
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
-import sympy
+import sympy as sp
 
 </script></div><br/>
   </body>
