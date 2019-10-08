@@ -84,7 +84,11 @@ HTML & JavaScript / Task 2
 <div class="compute"><script>
 %%r
 # task 1
-
+A<-sample(1:9999,20); A<-round(A/100-50,2); cat(A)
+minabs<-10**20; maxabs<--10**20
+for (a in A) {if (abs(a)<minabs) {minabs<-abs(a)};
+              if (abs(a)>maxabs) {maxabs<-abs(a)}}
+cat(c("\n max: ",maxabs,"; min: ",minabs,"; difference: ",maxabs-minabs,"\n"))
 </script></div><br/>
 <div class="compute"><script>
 %%r
