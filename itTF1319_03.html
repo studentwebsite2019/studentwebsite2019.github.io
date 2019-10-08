@@ -32,7 +32,16 @@ pretty_print('max: %.2f, min: %.2f, difference: %.2f'%(maxabs,minabs,maxabs-mina
 </script></div><br/>
 <div class="compute"><script>
 # sage / task 2
-
+N=20; Z=[]; c=0
+X=[round(random()*100-50,2) for i in [0..N]]; pretty_print(X)
+Y=[round(random()*100-50,2) for i in [0..N]]; pretty_print(Y)
+for i in [0..N]:
+    if X[i]>0:
+        Z.append(X[i])
+    else: 
+        Z.append(Y[i]); c+=1
+pretty_print('result: %s'%str(Z))
+pretty_print('number of replacements: %d'%c)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 1
