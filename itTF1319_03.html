@@ -24,13 +24,11 @@
 <div class="compute"><script>
 # sage / task 1
 A=[round(random()*100-50,2) for i in [0..20]]; pretty_print(A)
-def diff_abs(X):
-    minabs,maxabs=10**20,-10**20
-    for x in X:
-        if abs(x)<minabs: minabs=abs(x)
-        if abs(x)>maxabs: maxabs=abs(x)    
-    return maxabs,minabs,maxabs-minabs
-pretty_print('max: %.2f, min: %.2f, difference: %.2f'%diff_abs(A))
+minabs,maxabs=10**20,-10**20
+for a in A:
+    if abs(a)<minabs: minabs=abs(a)
+    if abs(a)>maxabs: maxabs=abs(a)    
+pretty_print('max: %.2f, min: %.2f, difference: %.2f'%(maxabs,minabs,maxabs-minabs))
 </script></div><br/>
 <div class="compute"><script>
 # sage / task 2
