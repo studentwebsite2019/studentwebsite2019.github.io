@@ -44,19 +44,26 @@ f=[3-2*x+2/3*x**4,1/x-1/x**2-1/x**3,(x**2+1)/(x**3-x),(1+3*x**2)/sp.sqrt(2*sp.pi
   x*x**(2/3)*(2*sp.log(x)-3**x),2*sp.sin(x)-3*sp.tan(x),x**(3/2)*(x**5+a)**(1/3),
   sp.sin(3*x/2),(1+4*x**2)**3,(sp.sin(x/2))**2]
 df=[sp.diff(y,x) for y in f]
+def dplot(G,dG,xmin,xmax,ymin,ymax):
+    p=sp.plot(G,(x,xmin,xmax),line_color='#3636ff',ylim=(ymin,ymax),show=False)
+    dp=sp.plot(dG,(x,xmin,xmax),line_color='#36ff36',ylim=(ymin,ymax),show=False)
+    p.extend(dp); p.show()
 for n in range(16):
     sp.pretty_print("6."+str(21+2*n)+": y="+str(f[n])+"; y'="+str(df[n]))
-    if (n not in [4,6,7,10,12]): 
-        F(x)=f[n]; dF(x)=df[n] 
-        p=sp.plot(F(x),(x,-5,5),line_color='#3636ff',ylim=(-10,10),show=False)
-        dp=sp.plot(dF(x),(x,-5,5),line_color='#36ff36',ylim=(-10,10),show=False)
-        p.extend(dp); p.show()
+    if (n not in [4,6,7,10,12,13,15]): 
+        dplot(f[n],df[n],-5,5,-10,10) 
     if (n in [6,7,10]): 
-        F(x)=f[n]; dF(x)=df[n] 
-        p=sp.plot(F(x),(x,.01,5),line_color='#3636ff',ylim=(-30,30),show=False)
-        dp=sp.plot(dF(x),(x,.01,5),line_color='#36ff36',ylim=(-30,30),show=False)
-        p.extend(dp); p.show()
-
+        dplot(f[n],df[n],.1,5,-30,30)
+    if (n in [13,15]): 
+        dplot(f[n],df[n],-5,5,-2,2)
+    if n==4:
+        F=lambda x,a,b:a/x**(3/5)+x**(2/3)/b 
+        dF=lambda x,a,b:-3*a/(5*x**(8/5))+2/(3*b*x**(1/3)) 
+        dplot(F(x,1,1),dF(x,1,1),.1,5,-30,30)
+    if n==12:
+        F=lambda x,a:x**(3/2)*(x**5+a)**(1/3) 
+        dF=lambda x,a:5*x**(11/2)/(3*(a+x**5)**(2/3))+3*sp.sqrt(x)*(a+x**5)**(1/3)/2
+        dplot(F(x,1),dF(x,1),.1,5,-30,30)
 </script></div><br/>
   </body>
 </html>
