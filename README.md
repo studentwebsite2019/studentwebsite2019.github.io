@@ -7,6 +7,7 @@
 ### [Standard Calculation. Page 2](https://studentwebsite2019.github.io/mathTF1319_02.html)
 ### [Standard Calculation. Page 3](https://studentwebsite2019.github.io/mathTF1319_03.html)
 ### [Standard Calculation. Page 4](https://studentwebsite2019.github.io/mathTF1319_04.html)
+### [Standard Calculation. Page 5](https://studentwebsite2019.github.io/mathTF1319_05.html)
 ### [Homework. Part 1](https://studentwebsite2019.github.io/mathTF1319_hw01.html)
 ## IT
 ### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/itTF1319W.html)
