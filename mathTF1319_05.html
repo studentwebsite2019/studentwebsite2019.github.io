@@ -18,7 +18,7 @@
   <body>
   <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 5</h1>
 Compute derivatives.
-  <h2>Task #6.21,#8.21, #9.21</h2>   
+  <h2>Task #6.21, #8.21, #9.21</h2>   
 <div class="compute"><script type="text/x-sage">
 # sage
 var('x,a,b,m'); 
@@ -41,21 +41,27 @@ show(ymin=-2,ymax=2,gridlines=True,figsize=7)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy
-import sympy as sp; x=sp.symbols('x')
+import sympy as sp; x,a,b,m=sp.symbols('x,a,b,m')
+def dplot(G,dG,xmin,xmax,ymin,ymax):
+    p=sp.plot(G,(x,xmin,xmax),line_color='#3636ff',ylim=(ymin,ymax),show=False)
+    dp=sp.plot(dG,(x,xmin,xmax),line_color='#36ff36',ylim=(ymin,ymax),show=False)
+    p.extend(dp); p.show()
+#6.21
+f621=(1/(m*sp.sqrt(a*b)))*sp.atan(sp.E**(m*x)*sp.sqrt(a/b)); df621=sp.diff(f621,x)
+sp.pretty_print("6.21: y="+str(f621)+";\n y'="+str(df621))
+F=lambda x,a,b,m:(1/(m*sp.sqrt(a*b)))*sp.atan(sp.E**(m*x)*sp.sqrt(a/b)) 
+dF=lambda x,a,b,m:sp.sqrt(a/b)*sp.E**(m*x)/(sp.sqrt(a*b)*(a*sp.E**(2*m*x)/b+1)) 
+dplot(F(x,1,1,1),dF(x,1,1,1),-10,10,0,2)
 #8.21
 f821=sp.sqrt(sp.tan(4))+(sp.sin(21*x))**2/(21*sp.cos(42*x))
 df821=sp.diff(f821,x)
 sp.pretty_print("8.21: y="+str(f821)+";\n y'="+str(df821))
-p821=sp.plot(f821,(x,-1,1),line_color='#3636ff',ylim=(-50,50),show=False)
-dp821=sp.plot(df821,(x,-1,1),line_color='#36ff36',ylim=(-50,50),show=False)
-p821.extend(dp821); p821.show()
+dplot(f821,df821,-1,1,-50,50)
 #9.21
 f921=sp.atan(x)+5/6*sp.log((x**2+1)/(x**2+4))
 df921=sp.diff(f921,x)
 sp.pretty_print("9.21: y="+str(f921)+";\n y'="+str(df921))
-p921=sp.plot(f921,(x,-20,20),line_color='#3636ff',ylim=(-2,2),show=False)
-dp921=sp.plot(df921,(x,-20,20),line_color='#36ff36',ylim=(-2,2),show=False)
-p921.extend(dp921); p921.show()
+dplot(f921,df921,-20,20,-2,2)
 </script></div><br/>
   <h2>Task </h2>
 <div class="compute"><script type="text/x-sage">
