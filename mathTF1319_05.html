@@ -28,8 +28,13 @@ pretty_print("6.21: y="+latex(f621)+"; y'="+latex(df621))
 F621,dF621=f621.subs(a==1,b==1,m==1),df621.subs(a==1,b==1,m==1)
 plot([F621,dF621],(x,-7,7),legend_label='automatic',detect_poles=True).\
 show(ymin=0,ymax=2,gridlines=True,figsize=7)
+#7.21
+f721=log(arcsin(sqrt(1-e^(2*x)))); df721=diff(f721,x)
+pretty_print("7.21: y="+latex(f721)+"; y'="+latex(df721))
+plot([f721,df721],(x,-2,0),legend_label='automatic',detect_poles=True).\
+show(ymin=-5,ymax=3,gridlines=True,figsize=7)
 #8.21
-var('x'); f821=sqrt(tan(4))+(sin(21*x))^2/(21*cos(42*x)); df821=diff(f821,x)
+f821=sqrt(tan(4))+(sin(21*x))^2/(21*cos(42*x)); df821=diff(f821,x)
 pretty_print("8.21: y="+latex(f821)+"; y'="+latex(df821))
 plot([f821,df821],(x,-.5,.5),legend_label='automatic',detect_poles=True).\
 show(ymin=-5,ymax=5,gridlines=True,figsize=7)
@@ -52,14 +57,16 @@ sp.pretty_print("6.21: y="+str(f621)+";\n y'="+str(df621))
 F=lambda x,a,b,m:(1/(m*sp.sqrt(a*b)))*sp.atan(sp.E**(m*x)*sp.sqrt(a/b)) 
 dF=lambda x,a,b,m:sp.sqrt(a/b)*sp.E**(m*x)/(sp.sqrt(a*b)*(a*sp.E**(2*m*x)/b+1)) 
 dplot(F(x,1,1,1),dF(x,1,1,1),-10,10,0,2)
+#7.21
+f721=sp.log(sp.asin(sp.sqrt(1-sp.exp(2*x)))); df721=sp.diff(f721,x)
+sp.pretty_print("7.21: y="+str(f721)+";\n y'="+str(df721))
+dplot(f721,df721,-2,-.1,-5,3)
 #8.21
-f821=sp.sqrt(sp.tan(4))+(sp.sin(21*x))**2/(21*sp.cos(42*x))
-df821=sp.diff(f821,x)
+f821=sp.sqrt(sp.tan(4))+(sp.sin(21*x))**2/(21*sp.cos(42*x)); df821=sp.diff(f821,x)
 sp.pretty_print("8.21: y="+str(f821)+";\n y'="+str(df821))
 dplot(f821,df821,-1,1,-50,50)
 #9.21
-f921=sp.atan(x)+5/6*sp.log((x**2+1)/(x**2+4))
-df921=sp.diff(f921,x)
+f921=sp.atan(x)+5/6*sp.log((x**2+1)/(x**2+4)); df921=sp.diff(f921,x)
 sp.pretty_print("9.21: y="+str(f921)+";\n y'="+str(df921))
 dplot(f921,df921,-20,20,-2,2)
 </script></div><br/>
