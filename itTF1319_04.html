@@ -42,6 +42,18 @@ find_root(F,A,B,E)
 </script></div><br/>
 <div class="compute"><script>
 # sage / task 2
+def create_table(f,x0,hx,n,z0,hz,m):
+    t=[['n','m','x','z','f(x,z)=','f(x,z)≈']]
+    for i in [1..n]:
+        for j in [1..m]:
+            x,z=x0+(i-1)*hx,z0+(j-1)*hz
+            t.append([i,j,x,z,f(x,z),f(x,z).n()])
+    return(table(t))
+f(x,z)=(log(sqrt(pi))+abs(2-x))/(3.3-1/z)+z^(2/3)*cos(x^2)
+create_table(f,6.7,.1,4,3.3,.2,3)
+</script></div><br/>
+<div class="compute"><script>
+# sage / task 3
 
 </script></div><br/>
 <div class="compute"><script>
@@ -50,6 +62,10 @@ find_root(F,A,B,E)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 2
+
+</script></div><br/>
+<div class="compute"><script>
+# python / task 3
 
 </script></div><br/>
 HTML & JavaScript / Task 1
@@ -62,6 +78,11 @@ HTML & JavaScript / Task 2
 %%html
 
 </script></div><br/>
+HTML & JavaScript / Task 3
+<div class="compute"><script>
+%%html
+
+</script></div><br/>
 <div class="compute"><script>
 %%r
 # task 1
@@ -70,6 +91,11 @@ HTML & JavaScript / Task 2
 <div class="compute"><script>
 %%r
 # task 2
+
+</script></div><br/>
+<div class="compute"><script>
+%%r
+# task 3
 
 </script></div><br/>
   </body>
