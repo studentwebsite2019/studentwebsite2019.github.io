@@ -43,6 +43,11 @@ f921=arctan(x)+5/6*log((x^2+1)/(x^2+4)); df921=diff(f921,x)
 pretty_print("9.21: y="+latex(f921)+"; y'="+latex(df921))
 plot([f921,df921],(x,-20,20),legend_label='automatic',detect_poles=True).\
 show(ymin=-2,ymax=2,gridlines=True,figsize=7)
+#10.21
+f1021=(-1/4)*arcsin((5+3*cosh(x))/(3+5*cosh(x))); df1021=diff(f1021,x)
+pretty_print("10.21: y="+latex(f1021)+"; y'="+latex(df1021.factor()))
+plot([f1021,df1021.factor()],(x,-10,10),legend_label='automatic',detect_poles=True).\
+show(ymin=-.5,ymax=.5,gridlines=True,figsize=7)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy
@@ -69,8 +74,12 @@ dplot(f821,df821,-1,1,-50,50)
 f921=sp.atan(x)+5/6*sp.log((x**2+1)/(x**2+4)); df921=sp.diff(f921,x)
 sp.pretty_print("9.21: y="+str(f921)+";\n y'="+str(df921))
 dplot(f921,df921,-20,20,-2,2)
+#10.21
+f1021=(-1/4)*sp.asin((5+3*sp.cosh(x))/(3+5*sp.cosh(x))); df1021=sp.diff(f1021,x)
+sp.pretty_print("10.21: y="+str(f1021)+";\n y'="+str(df1021.factor()))
+dplot(f1021,df1021,-10,10,-.5,.5)
 </script></div><br/>
-  <h2>Task </h2>
+  <h2>2.3 Task 1.21</h2>
 <div class="compute"><script type="text/x-sage">
 # sage
 
@@ -81,7 +90,7 @@ dplot(f921,df921,-20,20,-2,2)
 import sympy as sp
 
 </script></div><br/>
-  <h2>Task </h2>
+  <h2>2.3 Task 2.21</h2>
 <div class="compute"><script type="text/x-sage">
 # sage
 
@@ -91,14 +100,14 @@ import sympy as sp
 import sympy as sp
 
 </script></div><br/>
-   <h2>Task </h2>
+   <h2>Cells for Your Experiments</h2>
 <div class="compute"><script type="text/x-sage">
 # sage 
 
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
-# python / sympy
-import sympy as sp
+# python / sympy,numpy,pylab
+import sympy,numpy,pylab
 
 </script></div><br/>
   </body>
