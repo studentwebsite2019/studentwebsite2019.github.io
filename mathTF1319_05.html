@@ -83,7 +83,6 @@ dplot(f1021,df1021,-10,10,-.5,.5)
 Based on the definition of a derivative, find the value of f'(0).
 <div class="compute"><script type="text/x-sage">
 # sage
-# sage
 var('x'); f121=3^(x^2*sin(2/x))-1+2*x if x!=0 else 0
 df121=diff(f121,x)
 pretty_print("6.21: y="+latex(f121)+"; y'="+latex(df121))
@@ -100,8 +99,14 @@ import sympy as sp
 Write the equation of the tangent line to this curve at the point with abscissa $x_0$.
 <div class="compute"><script type="text/x-sage">
 # sage
-var('x'); f=x/(x^2+1); x0=-2 
-
+var('x'); f221=x/(x^2+1); x0=-2; df221=diff(f221,x)
+pretty_print("2.21: y="+latex(f221)+"; y'="+latex(df221))
+tf221=f221(x=x0)+df221(x=x0)*(x-x0)
+pretty_print("tangent \; line: y="+latex(tf221))
+nf221=f221(x=x0)-1/df221(x=x0)*(x-x0)
+pretty_print("normal \; line: y="+latex(nf221))
+plot([f221,df221,tf221,nf221],(x,-4,0),legend_label='automatic').\
+show(ymin=-2.5,ymax=1.5,gridlines=True,figsize=7,aspect_ratio=1)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy
