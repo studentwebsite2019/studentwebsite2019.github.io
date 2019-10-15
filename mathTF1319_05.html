@@ -110,8 +110,18 @@ show(ymin=-2.5,ymax=1.5,gridlines=True,figsize=7,aspect_ratio=1)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy
-import sympy as sp
-
+import sympy as sp; x=sp.symbols('x'); x0=-2
+f221=x/(x**2+1); df221=sp.diff(f221,x)
+sp.pretty_print("2.21: y="+str(f221)+";\n y'="+str(df221))
+tf221=f221.subs({x:x0})+df221.subs({x:x0})*(x-x0)
+sp.pretty_print("tangent line: y="+str(tf221))
+nf221=f221.subs({x:x0})-1/df221.subs({x:x0})*(x-x0)
+sp.pretty_print("normal line: y="+str(nf221))
+p=sp.plot(f221,(x,-5,0),line_color='#3636ff',ylim=(-2.5,1.5),show=False)
+dp=sp.plot(df221,(x,-5,0),line_color='#36ff36',ylim=(-2.5,1.5),show=False)
+tp=sp.plot(tf221,(x,-5,0),line_color='#ff3636',ylim=(-2.5,1.5),show=False)
+np=sp.plot(nf221,(x,-5,0),line_color='#ff36ff',ylim=(-2.5,1.5),show=False)
+p.extend(dp); p.extend(tp); p.extend(np); p.show()
 </script></div><br/>
    <h2>Cells for Your Experiments</h2>
 <div class="compute"><script type="text/x-sage">
