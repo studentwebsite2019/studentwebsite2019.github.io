@@ -16,12 +16,12 @@
   <body>
   <h1>&#x1F4D1; &nbsp;IT. TF1319. Standard Calculation 4</h1>
   <h2>Create code for the next tasks</h2>
-  <p>1.Create a program for solving the equation $f(x)=0$ on the segment [A, B] up to $10^{-4}$</p> 
+  <p>1. Create a program for solving the equation $f(x)=0$ on the segment [A, B] up to $10^{-4}$</p> 
   <p>using the method of sequential approximation and dividing the segment in half.</p>
   <p>2. Create a program for calculating values of the function $F(X,Z)$</p>
   <p>for N values of X (with the start position X_0 and the step HX)</p>
   <p>and for M values of Z (with the start position Z_0 and the step HZ).</p>
-  <p>3.Create a program for calculating sums of the series and values of the corresponding function</p>
+  <p>3. Create a program for calculating sums of the series and values of the corresponding function</p>
   <p>for the variable X (with the start position X_0, the end position X_N, and the step value H).</p>
 <div class="compute"><script>
 # sage / task 1
@@ -60,7 +60,27 @@ create_table(f,6.7,.1,4,3.3,.2,3)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 1
-
+import sympy as sp
+def find_root(f,a,b,e):
+    if sp.sign(f(a))==sp.sign(f(b)):
+      print('The segment does not possible to use for this decision method')
+    else:
+      print('Iteration steps')
+      while b-a>e:
+        ab=a+(b-a)/2; print([f(a),f(ab),f(b)])
+        if sp.sign(f(a))!=sp.sign(f(ab)):
+          if f(ab)==0: break
+          b=ab
+        else:
+          a=ab
+    print('f(x)=0 => x≈%.10f'%ab)
+x=sp.symbols('x');
+def G(x): return x**3 
+A,B=-.1,.1; E=10**(-4)
+find_root(G,A,B,E)
+def F(x): return sp.log(20/sp.sqrt(.009))-1.5*(sp.exp(x/3)+sp.exp(-x/3))-x; 
+A,B=0,2; E=10**(-4)
+find_root(F,A,B,E)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 2
