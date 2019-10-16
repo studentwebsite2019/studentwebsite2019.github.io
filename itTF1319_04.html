@@ -113,8 +113,9 @@ x=[.03*i for i in range(1,35)]
 controlline=[controlf(.03*i).n() for i in range(1,35)]
 def nplot(n):
     sumline=[sumf(.03*i,n).doit().evalf() for i in range(1,35)]
-    pl.scatter(x,sumline,label='sum line',s=100);
-    pl.scatter(x,controlline,label='control line');
+    pl.figure(figsize=(5,5)); ax=pl.gca()
+    ax.scatter(x,sumline,label='sum line',s=100);
+    ax.scatter(x,controlline,label='control line',c='red');
     pl.title('n=%d'%n); pl.legend(); pl.grid(); pl.show();
 nplot(3); nplot(5)
 </script></div><br/>
