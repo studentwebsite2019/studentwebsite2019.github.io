@@ -84,7 +84,17 @@ find_root(F,A,B,E)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 2
-
+import sympy as sp
+def create_table(f,x0,hx,n,z0,hz,m):
+    T=[['n','m','x','z','f(x,z)','f(x,z)=']]
+    for i in range(1,n+1):
+        for j in range(1,m+1):
+            x,z=x0+(i-1)*hx,z0+(j-1)*hz
+            T.append([i,j,x,z,f(x,z),f(x,z).n()])
+    for t in T: print(t); print(60*'--')
+x,z=sp.symbols('x,z');
+def f(x,z): return (sp.log(sp.sqrt(sp.pi))+abs(2-x))/(3.3-1/z)+z**(2/3)*sp.cos(x**2)
+create_table(f,6.7,.1,4,3.3,.2,3)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 3
