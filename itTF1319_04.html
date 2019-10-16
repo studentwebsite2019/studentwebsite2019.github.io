@@ -56,7 +56,14 @@ create_table(f,6.7,.1,4,3.3,.2,3)
 </script></div><br/>
 <div class="compute"><script>
 # sage / task 3
-
+var('k'); controlf(x)=2*x-x*exp(-x^2)-sin(x)
+sumf(x,n)=sum(sign(-1)^(k+1)*x^(2*k+1)*(1/factorial(k)+1/factorial(2*k+1)),k,1,n)
+def nplot(n):
+    sumline=[[x,sumf(x,n).n()] for x in [.05,.1,..,1.05]]
+    controlline=[[x,controlf(x).n()] for x in [.05,.1,..,1.05]]
+    (list_plot(sumline,size=50,legend_label='sum function',title='n=%d'%n)+\
+     list_plot(controlline,color='red',legend_label='control function')).show(gridlines=True)
+nplot(3); nplot(5)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 1
