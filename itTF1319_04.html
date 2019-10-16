@@ -105,7 +105,16 @@ create_table(f,6.7,.1,4,3.3,.2,3)
 </script></div><br/>
 <div class="compute"><script>
 # python / task 3
-
+import sympy as sp; import pylab as pl; k=sp.symbols('k') 
+def controlf(x): return 2*x-x*sp.exp(-x**2)-sp.sin(x)
+sumf=lambda x,n: sp.Sum(sp.sign(-1)**(k+1)*x**(2*k+1)*\
+                        (1/sp.factorial(k)+1/sp.factorial(2*k+1)),(k,1,n))
+x=[.05*i for i in range(1,22)]
+controlline=[controlf(.05*i).n() for i in range(1,22)]
+sumline=[sumf(.05*i,5).doit().evalf() for i in range(1,22)]
+pl.scatter(x,sumline,label='sum line',s=100);
+pl.scatter(x,controlline,label='control line');
+pl.grid(); pl.show();
 </script></div><br/>
 HTML & JavaScript / Task 1
 <div class="compute"><script>
