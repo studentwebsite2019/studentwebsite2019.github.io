@@ -132,7 +132,26 @@ HTML & JavaScript / Task 2
 HTML & JavaScript / Task 3
 <div class="compute"><script>
 %%html
-
+<script src='https://code.highcharts.com/highcharts.js'/>
+<div id='container3' style='height:600px; width:600px; margin:0 auto'></div><script>
+function factorial(x) {if (x===0){return 1;} return x*factorial(x-1);};
+function sumf(n,x) {
+  var s=0; var k;
+  for (k=1; k<n+1; k++) {
+      s+=Math.pow(Math.sign(-1),k+1)*Math.pow(x,2*k+1)*(1/factorial(k)+1/factorial(2*k+1));};
+  return s;
+};
+function controlf(x) {return 2*x-x*Math.exp(-Math.pow(x,2))-Math.sin(x);};
+var cxy=Array(35).fill(0.03).map((r,x)=>[x*r,controlf(x*r)]);
+var sxy3=Array(35).fill(0.03).map((r,x)=>[x*r,sumf(3,x*r)]);
+var sxy5=Array(35).fill(0.03).map((r,x)=>[x*r,sumf(5,x*r)]);
+Highcharts.chart('container3', {
+    chart:{type:'line'},xAxis:{title:{text:'x'}},yAxis:{title:{text:'y'}},
+    title:{text:'Sum Function and Control Function'},credits:{enabled:false},
+    series:[{name:'control function',color:'#ff3636',data:cxy},
+            {name:'sum function n=3',color:'#3636ff',data:sxy3},
+            {name:'sum function n=5',color:'#36ff36',data:sxy5}]
+});
 </script></div><br/>
 <div class="compute"><script>
 %%r
