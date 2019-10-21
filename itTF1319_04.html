@@ -161,7 +161,15 @@ find_root(F,A,B,E)
 <div class="compute"><script>
 %%r
 # task 2
-
+create_table<-function(f,x0,hx,n,z0,hz,m) {
+    cat(c('n','m ','x  ','z    ','f(x,z)','\n'))
+    for (i in 1:n) {
+        for (j in 1:m) {
+            x<-x0+(i-1)*hx; z<-z0+(j-1)*hz
+            cat(c(i,j,x,z,f(x,z),'\n'))
+            cat('-----------------','\n')}  }  }
+f<-function(x,z){return((log(sqrt(pi))+abs(2-x))/(3.3-1/z)+z^(2/3)*cos(x^2))}
+create_table(f,6.7,.1,4,3.3,.2,3)
 </script></div><br/>
 <div class="compute"><script>
 %%r
