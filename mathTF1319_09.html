@@ -21,8 +21,13 @@
   <h2>Task 1 (#19.21)</h2>   
 <div class="compute"><script type="text/x-sage">
 # sage; task 1 (19.21)
-var('x,y,t'); 
-
+set_verbose(-1); var('t')
+x,y=cos(t),log(sin(t)); g=Graphics()
+dx,dy=diff(x,t),diff(y,t); d2y=diff(dy/dx,t)/dx
+el=[(x,y),(x,dy),(x,d2y)]; l=["y","y'","y''"]
+for i in range(3):
+    g+=parametric_plot(el[i],(t,-3,3),color=hue(i/3),legend_label=el[i])
+g.show(ymin=-3,ymax=3,aspect_ratio=1/4)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage">
 # python / sympy; task 1 (19.21)
