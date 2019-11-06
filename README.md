@@ -11,6 +11,7 @@
 ### [Standard Calculation. Page 4](https://studentwebsite2019.github.io/mathTF1319_04.html)
 ### [Standard Calculation. Page 5](https://studentwebsite2019.github.io/mathTF1319_05.html)
 ### [Standard Calculation. Page 9](https://studentwebsite2019.github.io/mathTF1319_09.html)
+### [Standard Calculation. Page 11](https://studentwebsite2019.github.io/mathTF1319_11.html)
 ### [Homework. Part 1](https://studentwebsite2019.github.io/mathTF1319_hw01.html)
 ## IT
 ### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/itTF1319W.html)
