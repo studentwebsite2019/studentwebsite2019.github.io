@@ -25,11 +25,13 @@ def create_ptable(f,n,a):
        ['%d order Taylor formula'%i for i in range(4)],[f.taylor(x,a,i) for i in range(4)],
        [f.taylor(x,a,i).factor() for i in range(4)]]
     show(table(t))
-    p=plot(f,a-5,a+5,thickness=5,color='#3636ff',alpha=0.5,legend_label='$%s$'%latex(f),gridlines=True)+\
+    p=plot(f,a-5,a+5,thickness=5,color='#3636ff',alpha=0.5,legend_label='$%s$'%latex(f))+\
     sum([plot(f.taylor(x,2,i),a-5,a+5,hue=cos(i/n),thickness=1,
               legend_label='$n=%d: %s$'%(i,latex(f.taylor(x,2,i).factor()))) for i in [1..n]])
-    p.show(figsize=(9,6),title='Taylor Series: $f(x)=%s; a=%d$'%(latex(f),a),fontsize=15)
-var('x'); f21=ln(4+3*x+x^2); n21=3; a21=2; create_ptable(f21,n21,a21)
+    p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s; a=%d$'%(latex(f),a),fontsize=15)
+function('f'); var('x,a'); lf=latex(f(x).taylor(x,a,3))
+pretty_print(html('<p style="font-size:22px">3d order Taylor formula: $f(x)=%s$</p>'%lf)) 
+f21=ln(4+3*x+x^2); n21=3; a21=2; create_ptable(f21,n21,a21)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage"># python / sympy; task 1 )
 import sympy as sp
