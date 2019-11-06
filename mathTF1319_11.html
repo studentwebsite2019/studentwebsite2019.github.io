@@ -14,16 +14,24 @@
   </style>  
   <body>
   <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 11</h1>
-  <h2>Task 1</h2>   
+  <h2>Task 1</h2>
+Write the 3rd order Taylor formula
 <div class="compute"><script type="text/x-sage"># sage; task 1
-set_verbose(-1)
-
+def create_ptable(f,n,a):
+    t=[['f(x)','$f \prime (x)$','$f \prime \prime (x)$','$f \prime \prime \prime(x)$'],
+       [f,diff(f,x),diff(diff(f,x),x),diff(diff(diff(f,x),x),x)]]
+    show(table(t))
+    p=plot(f,a-5,a+5,thickness=5,color='#3636ff',alpha=0.5,gridlines=True)+\
+    sum([plot(f.taylor(x,2,i),a-5,a+5,hue=cos(i/n),thickness=1,legend_label=str(i)) for i in [1..n]])
+    p.show(figsize=(9,6),title='Taylor Series: $f(x)=%s; x=%d$'%(latex(f),a),fontsize=15)
+var('x'); f21=log(4+3*x+x^2); n21=3; a21=2; create_ptable(f21,n21,a21)
 </script></div><br/>
 <div class="compute"><script type="text/x-sage"># python / sympy; task 1 )
 import sympy as sp
 
 </script></div><br/>
   <h2>Task 2</h2>
+Write the 4th-order Maclaurin formula
 <div class="compute"><script type="text/x-sage"># sage; task 2
 
 </script></div><br/>
