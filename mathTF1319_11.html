@@ -41,7 +41,7 @@ import sympy as sp
 Write the 4th-order Maclaurin formula
 <div class="compute"><script type="text/x-sage"># sage; task 2
 def create_ptable(f,n):
-    s='$\lim\limits_{x \\to 0}'
+    s='$\lim\limits_{x \\to 0}'; ls=['--','-.',':','-'] 
     t1=[['$f(x)$','$f \prime (x)$','$f \prime \prime (x)$'],
         [f,diff(f,x),diff(f,x,x)],
         ['','$f \prime \prime \prime(x)$','$f \prime \prime \prime \prime(x)$'],
@@ -53,10 +53,11 @@ def create_ptable(f,n):
         ['%d order Maclaurin formula'%i for i in range(n+1)],
         [f.taylor(x,0,i) for i in range(n+1)]]
     show(table(t1)); show(table(t2))
-    p=plot(f,-3,3,thickness=5,color='#3636ff',alpha=0.5,legend_label='$f(x)=%s$'%latex(f))+\
-    sum([plot(f.taylor(x,0,i),-3,3,hue=cos(i/n),thickness=1,
+    p=plot(f,-3,3,thickness=3,color='#3636ff',alpha=0.7,legend_label='$f(x)=%s$'%latex(f))+\
+    sum([plot(f.taylor(x,0,i),-3,3,hue=cos(i/n),thickness=1,linestyle=ls[i-1],
               legend_label='$n=%d: %s$'%(i,latex(f.taylor(x,0,i).factor()))) for i in [1..n]])
-    p.show(figsize=(10,5),gridlines=True,title='$f(x)=%s$'%latex(f),fontsize=15)
+    p.set_legend_options(back_color='none',font_size=18,loc=1)
+    p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s$'%latex(f),fontsize=20)
 function('f'); var('x'); lf=latex(f(x).taylor(x,0,4))
 pretty_print(html('<p style="font-size:20px">4th order Maclaurin formula: $f(x)=%s$</p>'%lf)) 
 f21=sin(2*x)/x; n21=4; create_ptable(f21,n21)
