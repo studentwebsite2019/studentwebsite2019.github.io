@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width">
     <title>Maths_TF1319_11</title>
     <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-    <script>$(function (){sagecell.makeSagecell({inputLocation:'div.compute',evalButtonText:'Run'});});</script>
+    <script>$(function(){
+            sagecell.makeSagecell({inputLocation:'div.link',linked:true,evalButtonText:'Run Linked Cells'});
+            sagecell.makeSagecell({inputLocation:'div.sage',evalButtonText:'Run Detached Cells'});
+        });
+    </script>
   </head>
   <style>
   @import url('https://fonts.googleapis.com/css?family=Orbitron');
@@ -16,31 +20,31 @@
   <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 11</h1>
   <h2>Task 1</h2>
 Write the 3rd order Taylor formula
-<div class="compute"><script type="text/x-sage"># sage; task 1
-def create_ptable(f,n,a):
+<div class="link"><script type="text/x-sage"># sage; task 1
+def create_ptable1(f,n,a):
     t=[['f(x)','$f \prime (x)$','$f \prime \prime (x)$','$f \prime \prime \prime(x)$'],
        [f,diff(f,x),diff(f,x,x),diff(f,x,x,x)],
        ['f(a)','$f \prime (a)$','$f \prime \prime (a)$','$f \prime \prime \prime(a)$'],
        [f(x=a),diff(f,x)(x=a),diff(f,x,x)(x=a),diff(f,x,x,x)(x=a)],
-       ['%d order Taylor formula'%i for i in range(4)],[f.taylor(x,a,i) for i in range(4)],
-       [f.taylor(x,a,i).factor() for i in range(4)]]
-    show(table(t))
-    p=plot(f,a-5,a+5,thickness=5,color='#3636ff',alpha=0.5,legend_label='$%s$'%latex(f))+\
-    sum([plot(f.taylor(x,2,i),a-5,a+5,hue=cos(i/n),thickness=1,
+       ['%d order Taylor formula'%i for i in range(n+1)],
+       [f.taylor(x,a,i) for i in range(n+1)],[f.taylor(x,a,i).factor() for i in range(n+1)]]
+    show(table(t)); ls=['--','-.',':']
+    p=plot(f,a-5,a+5,thickness=3,color='#3636ff',alpha=0.5,legend_label='$f(x)=%s$'%latex(f))+\
+    sum([plot(f.taylor(x,2,i),a-5,a+5,hue=cos(i/n),thickness=2,linestyle=ls[i-1],
               legend_label='$n=%d: %s$'%(i,latex(f.taylor(x,2,i).factor()))) for i in [1..n]])
-    p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s; a=%d$'%(latex(f),a),fontsize=15)
+    p.set_legend_options(back_color='none',font_size=18,loc=5)
+    p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s; a=%d$'%(latex(f),a),fontsize=20)
 function('f'); var('x,a'); lf=latex(f(x).taylor(x,a,3))
 pretty_print(html('<p style="font-size:22px">3d order Taylor formula: $f(x)=%s$</p>'%lf)) 
-f21=ln(4+3*x+x^2); n21=3; a21=2; create_ptable(f21,n21,a21)
+f21=ln(4+3*x+x^2); n21=3; a21=2; create_ptable1(f21,n21,a21)
 </script></div><br/>
-<div class="compute"><script type="text/x-sage"># python / sympy; task 1 )
-import sympy as sp
+<div class="link"><script type="text/x-sage">#sage; task 1
 
 </script></div><br/>
   <h2>Task 2</h2>
 Write the 4th-order Maclaurin formula
-<div class="compute"><script type="text/x-sage"># sage; task 2
-def create_ptable(f,n):
+<div class="link"><script type="text/x-sage"># sage; task 2
+def create_ptable2(f,n):
     s='$\lim\limits_{x \\to 0}'; ls=['--','-.',':','-'] 
     t1=[['$f(x)$','$f \prime (x)$','$f \prime \prime (x)$'],
         [f,diff(f,x),diff(f,x,x)],
@@ -60,16 +64,15 @@ def create_ptable(f,n):
     p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s$'%latex(f),fontsize=20)
 function('f'); var('x'); lf=latex(f(x).taylor(x,0,4))
 pretty_print(html('<p style="font-size:20px">4th order Maclaurin formula: $f(x)=%s$</p>'%lf)) 
-f21=sin(2*x)/x; n21=4; create_ptable(f21,n21)
+f21=sin(2*x)/x; n21=4; create_ptable2(f21,n21)
 </script></div><br/>
-<div class="compute"><script type="text/x-sage"># python / sympy; task 2
-import sympy as sp
+<div class="link"><script type="text/x-sage"># sage; task 2
 
 </script></div><br/>
    <h2>Cells for Your Experiments</h2>
-<div class="compute"><script type="text/x-sage"># sage 
+<div class="sage"><script type="text/x-sage"># sage 
 </script></div><br/>
-<div class="compute"><script type="text/x-sage"># python / sympy,numpy,pylab
+<div class="sage"><script type="text/x-sage"># python / sympy,numpy,pylab
 import sympy,numpy,pylab
 </script></div><br/>
   </body>
