@@ -30,16 +30,16 @@ def create_ptable1(f,n,a):
        [f.taylor(x,a,i) for i in range(n+1)],[f.taylor(x,a,i).factor() for i in range(n+1)]]
     show(table(t)); ls=['--','-.',':']
     p=plot(f,a-5,a+5,thickness=3,color='#3636ff',alpha=0.5,legend_label='$f(x)=%s$'%latex(f))+\
-    sum([plot(f.taylor(x,2,i),a-5,a+5,hue=cos(i/n),thickness=2,linestyle=ls[i-1],
-              legend_label='$n=%d: %s$'%(i,latex(f.taylor(x,2,i).factor()))) for i in [1..n]])
-    p.set_legend_options(back_color='none',font_size=18,loc=5)
+    sum([plot(f.taylor(x,a,i),a-5,a+5,hue=cos(i/n),thickness=2,linestyle=ls[i-1],
+              legend_label='$n=%d: %s$'%(i,latex(f.taylor(x,a,i)))) for i in [1..n]])
+    p.set_legend_options(back_color='none',font_size=15,loc=5)
     p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s; a=%d$'%(latex(f),a),fontsize=20)
 function('f'); var('x,a'); lf=latex(f(x).taylor(x,a,3))
 pretty_print(html('<p style="font-size:22px">3d order Taylor formula: $f(x)=%s$</p>'%lf)) 
 f21=ln(4+3*x+x^2); n21=3; a21=2; create_ptable1(f21,n21,a21)
 </script></div><br/>
 <div class="link"><script type="text/x-sage">#sage; task 1
-
+f20=sin(x)^4; n20=3; a20=pi/4; create_ptable1(f20,n20,a20)
 </script></div><br/>
   <h2>Task 2</h2>
 Write the 4th-order Maclaurin formula
@@ -58,9 +58,9 @@ def create_ptable2(f,n):
         [f.taylor(x,0,i) for i in range(n+1)]]
     show(table(t1)); show(table(t2))
     p=plot(f,-3,3,thickness=3,color='#3636ff',alpha=0.7,legend_label='$f(x)=%s$'%latex(f))+\
-    sum([plot(f.taylor(x,0,i),-3,3,hue=cos(i/n),thickness=1,linestyle=ls[i-1],
+    sum([plot(f.taylor(x,0,i),-3,3,hue=cos(i/n),thickness=2,linestyle=ls[i-1],
               legend_label='$n=%d: %s$'%(i,latex(f.taylor(x,0,i).factor()))) for i in [1..n]])
-    p.set_legend_options(back_color='none',font_size=18,loc=1)
+    p.set_legend_options(back_color='none',font_size=15,loc=1)
     p.show(figsize=(10,7),gridlines=True,title='$f(x)=%s$'%latex(f),fontsize=20)
 function('f'); var('x'); lf=latex(f(x).taylor(x,0,4))
 pretty_print(html('<p style="font-size:20px">4th order Maclaurin formula: $f(x)=%s$</p>'%lf)) 
