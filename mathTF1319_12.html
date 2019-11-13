@@ -21,10 +21,10 @@
   <h2>Task 1</h2>
 Find intervals of increasing and decreasing  for the function and its extremum points
 <div class="link"><script type="text/x-sage"># sage; task 1
-var('x'); y21=x/ln(x); dy21=diff(y21,x); el=[["x","y","y'"],[x,y21,dy21]]
-for xv in [.05,.25,..,2]: el+=[[xv,y21(xv),dy21(xv)]]
-show(table(el)); p=plot([y21,dy21],(0,2),legend_label='automatic')
-p.show(ymin=-100,ymax=100,gridlines=True)
+var('x'); y21=x/ln(x); dy21=diff(y21,x); el1=[["x","y","y'"],[x,y21,dy21]]
+for xv in [.05,.25,..,2]: el1+=[[xv,y21(xv),dy21(xv)]]
+show(table(el1)); p1=plot([y21,dy21],(0,2),legend_label='automatic')
+p1.show(ymin=-100,ymax=100,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 1
 
@@ -33,10 +33,10 @@ p.show(ymin=-100,ymax=100,gridlines=True)
 Build a function plot using the first-order derivative
 <div class="link"><script type="text/x-sage"># sage; task 2 (#1.21)
 var('x'); y21=x^2*(x-4)^2/16; dy21=diff(y21,x)
-el=[["x","y","y'"],[x,y21,dy21]]
-for xv in [-6,-5,..,8]: el+=[[xv,y21(xv),dy21(xv)]]
-show(table(el)); p=plot([y21,dy21],(-6,8),legend_label='automatic')
-p.show(ymin=-100,ymax=100,gridlines=True)
+el2=[["x","y","y'"],[x,y21,dy21]]
+for xv in [-6,-5,..,8]: el2+=[[xv,y21(xv),dy21(xv)]]
+show(table(el2)); p2=plot([y21,dy21],(-6,8),legend_label='automatic')
+p2.show(ymin=-100,ymax=100,gridlines=True)
 
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 2
@@ -46,9 +46,10 @@ p.show(ymin=-100,ymax=100,gridlines=True)
 Build a function plot using the first-order derivative
 <div class="link"><script type="text/x-sage"># sage; task 3 (#2.21)
 var('x'); y21=(4*x*(x-1))^(1/3); dy21=diff(y21,x)
-el=[["x","y","y'"],[x,y21,dy21]]
-for xv in [1,1.1,..,2]: el+=[xv,y21(x=xv),dy21(x=xv)]
-show(table(el))
+el3=[["x","y","y'"],[x,y21,dy21]]
+for xv in [-2.5,-1.5,..,8.5]: el3+=[[xv,y21(xv).n(),dy21(xv).n()]]
+show(table(el3)); p3=plot([y21,dy21],(-10,10),legend_label='automatic')
+p3.show(ymin=-2,ymax=8,gridlines=True)
 
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 3
@@ -58,10 +59,10 @@ show(table(el))
 Find the largest and smallest function values on given segments.
 <div class="link"><script type="text/x-sage"># sage; task 4 (#3.21)
 var('x'); y21=(2*(x-1)^2*(x-4))^(1/3); dy21=diff(y21,x)
-el=[["x","y","y'"],[x,y21,dy21]]
-for xv in [0,.5,..,4]: el+=[xv,y21(x=xv),dy21(x=xv)]
-show(table(el))
-
+el4=[["x","y","y'"],[x,y21,dy21]]
+for xv in [.5,1.5,..,10.5]: el4+=[[xv,y21(xv).n(),dy21(xv).n()]]
+show(table(el4)); p4=plot([y21,dy21],(4,10),legend_label='automatic')
+p4.show(ymin=-2,ymax=8,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 4
 
