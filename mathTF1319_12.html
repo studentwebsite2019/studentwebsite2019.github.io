@@ -21,13 +21,14 @@
   <h2>Task 1</h2>
 Find intervals of increasing and decreasing  for the function and its extremum points
 <div class="link"><script type="text/x-sage"># sage; task 1
-var('x'); y21=x/ln(x); dy21=diff(y21,x) 
+var('x'); y21=x/ln(x); dy21=diff(y21,x).factor()
 pretty_print(html('$\\lim_{x \\to 0}(%s)=%.2f$'%(latex(dy21),limit(diff(y21,x),x=0))))
 pretty_print(html('$\\lim_{x \\to 1}(%s)=%s$'%(latex(dy21),latex(limit(diff(y21,x),x=1)))))
 el1=[["x","y","y'","y'>0?","y'=0?","y'<0?"],[x,y21,dy21,'','','']]
 for xv in [.05,.25,..,2]: 
     el1+=[[xv,y21(xv),dy21(xv),bool(dy21(xv)>0),bool(dy21(xv)==0),bool(dy21(xv)<0)]]
-show(table(el1)); p1=plot([y21,dy21.factor()],(0,2),legend_label='automatic')
+show(table(el1)); ll=['$%s$'%latex(y21),'$%s$'%latex(dy21)]
+p1=plot([y21,dy21],(0,2),legend_label=ll); p1.set_legend_options(font_size=15)
 p1.show(ymin=-50,ymax=50,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 1
@@ -42,7 +43,8 @@ for x0 in [0,2,4]:
 el2=[["x","y","y'","y'>0?","y'=0?","y'<0?"],[x,y21,dy21,'','','']]
 for xv in [-3,-2,..,7]: 
     el2+=[[xv,y21(xv),dy21(xv),bool(dy21(xv)>0),bool(dy21(xv)==0),bool(dy21(xv)<0)]]
-show(table(el2)); p2=plot([y21,dy21],(-3,7),legend_label='automatic')
+show(table(el2)); ll=['$%s$'%latex(y21),'$%s$'%latex(dy21)]
+p2=plot([y21,dy21],(-3,7),legend_label=ll); p2.set_legend_options(font_size=15)
 p2.show(ymin=-30,ymax=30,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 2
@@ -60,7 +62,8 @@ el3=[["x","y","y'","y'>0?","y'=0?","y'<0?"],[x,y21c,dy21c,'','','']]
 for xv in [-2.5,-1.5,..,8.5]: 
     el3+=[[xv,y21(xv).n(),dy21(xv).n(),bool(dy21(xv)>0),bool(dy21(xv)==0),bool(dy21(xv)<0)]]
 show(table(el3)); ll=['$%s$'%latex(y21c),'$%s$'%latex(dy21c)]
-plot([y21,dy21],(-5,5),legend_label=ll).show(ymin=-2,ymax=8,gridlines=True)
+p3=plot([y21,dy21],(-5,5),legend_label=ll); p3.set_legend_options(font_size=15)
+p3.show(ymin=-2,ymax=8,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 3
 
@@ -84,7 +87,8 @@ for xv in [1,4]: el4+=[[xv,y21(xv),'max','','','']]
 #el4=[["x","y","y'"],[x,y21c,dy21c]]
 #for xv in [-1.5,-.5,..,5.5]: el4+=[[xv,y21(xv).n(),dy21(xv).n()]]
 show(table(el4)); ll=['$%s$'%latex(y21c),'$%s$'%latex(dy21c)] 
-plot([y21,dy21],(-1,5),legend_label=ll).show(ymin=-4,ymax=4,gridlines=True)
+p4=plot([y21,dy21],(-1,5),legend_label=ll); p4.set_legend_options(font_size=15)
+p4.show(ymin=-4,ymax=4,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 4
 
