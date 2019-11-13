@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Maths_TF1319_12</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function(){
+            sagecell.makeSagecell({inputLocation:'div.link',linked:true,evalButtonText:'Run Linked Cells'});
+            sagecell.makeSagecell({inputLocation:'div.sage',evalButtonText:'Run Detached Cells'});
+        });
+    </script>
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Orbitron');
+  h1, h2 {color:#3636ff; font-family:'Orbitron'; text-shadow:5px 5px 5px #aaa;}
+  .sagecell .CodeMirror-scroll {min-height:3em; max-height:38em;}
+  </style>  
+  <body>
+  <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 12</h1>
+  <h2>Task 1</h2>
+Find intervals of increasing and decreasing  for the function and its extremum points
+<div class="link"><script type="text/x-sage"># sage; task 1
+var('x'); y21=x/ln(x); dy21=diff(y21,x); el=[["x","y","y'"],[x,y21,dy21]]
+show(table(el))
+
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># sage; task 1
+
+</script></div><br/>
+  <h2>Task 2</h2>
+Build a function plot using the first-order derivative
+<div class="link"><script type="text/x-sage"># sage; task 2 (#1.21)
+var('x'); y21=x^2*(x-4)^/16; dy21=diff(y21,x)
+el=[["x","y","y'"],[x,y21,dy21]]
+for xv in [1,1.1,..,2]: el+=[xv,y21(x=xv),dy21(x=xv)]
+show(table(el))
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># sage; task 2
+
+</script></div><br/>
+  <h2>Task 3</h2>
+Build a function plot using the first-order derivative
+<div class="link"><script type="text/x-sage"># sage; task 3 (#2.21)
+var('x'); y21=(4*x*(x-1))^(1/3); dy21=diff(y21,x)
+el=[["x","y","y'"],[x,y21,dy21]]
+for xv in [1,1.1,..,2]: el+=[xv,y21(x=xv),dy21(x=xv)]
+show(table(el))
+
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># sage; task 3
+
+</script></div><br/>
+  <h2>Task 4</h2>
+Find the largest and smallest function values on given segments.
+<div class="link"><script type="text/x-sage"># sage; task 4 (#3.21)
+var('x'); y21=(2*(x-1)^2*(x-4))^(1/3); dy21=diff(y21,x)
+el=[["x","y","y'"],[x,y21,dy21]]
+for xv in [0,.5,..,4]: el+=[xv,y21(x=xv),dy21(x=xv)]
+show(table(el))
+
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># sage; task 4
+
+</script></div><br/>      
+   <h2>Cells for Your Experiments</h2>
+<div class="sage"><script type="text/x-sage"># sage 
+</script></div><br/>
+<div class="sage"><script type="text/x-sage"># python / sympy,numpy,pylab
+import sympy,numpy,pylab
+</script></div><br/>
+  </body>
+</html>
