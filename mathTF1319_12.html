@@ -22,8 +22,9 @@
 Find intervals of increasing and decreasing  for the function and its extremum points
 <div class="link"><script type="text/x-sage"># sage; task 1
 var('x'); y21=x/ln(x); dy21=diff(y21,x); el=[["x","y","y'"],[x,y21,dy21]]
-show(table(el))
-
+for xv in [.05,.25,..,2]: el+=[[xv,y21(xv),dy21(xv)]]
+show(table(el)); p=plot([y21,dy21],(0,2),legend_label='automatic')
+p.show(ymin=-100,ymax=100,gridlines=True)
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 1
 
@@ -31,10 +32,12 @@ show(table(el))
   <h2>Task 2</h2>
 Build a function plot using the first-order derivative
 <div class="link"><script type="text/x-sage"># sage; task 2 (#1.21)
-var('x'); y21=x^2*(x-4)^/16; dy21=diff(y21,x)
+var('x'); y21=x^2*(x-4)^2/16; dy21=diff(y21,x)
 el=[["x","y","y'"],[x,y21,dy21]]
-for xv in [1,1.1,..,2]: el+=[xv,y21(x=xv),dy21(x=xv)]
-show(table(el))
+for xv in [-6,-5,..,8]: el+=[[xv,y21(xv),dy21(xv)]]
+show(table(el)); p=plot([y21,dy21],(-6,8),legend_label='automatic')
+p.show(ymin=-100,ymax=100,gridlines=True)
+
 </script></div><br/>
 <div class="link"><script type="text/x-sage"># sage; task 2
 
