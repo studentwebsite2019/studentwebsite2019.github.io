@@ -24,17 +24,17 @@ Conduct a complete study of functions and build their graphs.
 1) Найдем область определения функции и точки разрыва.<br/>
 $\displaystyle{y = \frac{4}{x^2+2 x-3} = \frac{4}{(x-1) \ (x+3)}}$<br/>
 $\displaystyle{D(y)= (-\infty; -3) \cup (-3; 1) \cup (1; +\infty)}$<br/>
-$\displaystyle{x = -3; x = 1}$ - точки разрыва.<br/>
+$\displaystyle{x = -3; x = 1}$ - точки разрыва второго рода.<br/>
 2) Вычислим односторонние пределы функции<br/>
 - в граничных точках области определения, <br/>
 - в точках разрыва. <br/>
 Найдем вертикальные асимптоты.<br/>
-$\displaystyle{\lim_{x \to +\infty} \frac{4}{x^2 + 2 x - 3} = \lim_{ x \to +\infty} \frac{4}{x^2} = 0}$<br/>
-$\displaystyle{\lim_{x \to -\infty} \frac{4}{x^2 + 2 x - 3} = \lim_{ x \to -\infty} \frac{4}{x^2} = 0}$<br/>
-$\displaystyle{\lim_{x \to -3+0} \frac{4}{x^2 + 2 x - 3} = \frac{4}{(-3 + 0 - 1) \ (-3 + 0 + 3)} = \frac{4}{+ 0 \ (-4 + 0)} = -\infty }$<br/>
-$\displaystyle{\lim_{x \to -3-0} \frac{4}{x^2 + 2 x - 3} = \frac{4}{(-3 - 0 - 1) \ (-3 - 0 + 3)} = \frac{4}{- 0 \ (-4 - 0)} = +\infty}$<br/>
-$\displaystyle{\lim_{x \to 1+0} \frac{4}{x^2 + 2 x - 3} = \frac{4}{(1 + 0 - 1) \ (1+ 0 + 3)} = \frac{4}{+ 0 \ (4 + 0)} = +\infty}$<br/>
-$\displaystyle{\lim_{x \to 1-0} \frac{4}{x^2 + 2 x - 3} = \frac{4}{(1 - 0 - 1) \ (1- 0 + 3)} = \frac{4}{- 0 \ (4 - 0)} = -\infty}$<br/>
+$\displaystyle{\lim_{x \to +\infty} \frac{4}{x^2+2 x-3} = \lim_{x \to +\infty} \frac{4}{x^2} = 0}$<br/>
+$\displaystyle{\lim_{x \to -\infty} \frac{4}{x^2+2 x-3} = \lim_{x \to -\infty} \frac{4}{x^2} = 0}$<br/>
+$\displaystyle{\lim_{x \to -3+0} \frac{4}{x^2+2 x-3} = \frac{4}{(-3+0-1) \ (-3+0+3)} = \frac{4}{+ 0 \ (-4+0)} = -\infty }$<br/>
+$\displaystyle{\lim_{x \to -3-0} \frac{4}{x^2+2 x-3} = \frac{4}{(-3-0-1) \ (-3-0+3)} = \frac{4}{- 0 \ (-4-0)} = +\infty}$<br/>
+$\displaystyle{\lim_{x \to 1+0} \frac{4}{x^2+2 x-3} = \frac{4}{(1+0-1) \ (1+0+3)} = \frac{4}{+0 \ (4+0)} = +\infty}$<br/>
+$\displaystyle{\lim_{x \to 1-0} \frac{4}{x^2+2 x-3} = \frac{4}{(1-0-1) \ (1-0+3)} = \frac{4}{-0 \ (4-0)} = -\infty}$<br/>
 Прямые $x = -3, \ x = 1$ являются вертикальными асимптотами.<br/>
 <div class="link1"><script type="text/x-sage"># sage; task 1 (#7.21)
 var('x'); y21=4/(x^2+2*x-3)
@@ -74,7 +74,7 @@ $\displaystyle{k=\lim_{x \to +\infty} \frac{\frac{4}{x^2+2 x-3}}{x} = \lim_{x \t
 $\displaystyle{k=\lim_{x \to -\infty} \frac{\frac{4}{x^2+2 x-3}}{x} = \lim_{x \to -\infty} \frac{4}{x^3+2x^2-3 x} = 0}$<br/>
 $\displaystyle{b=\lim_{x \to +\infty} \frac{4}{x^2+2 x-3}-kx = \lim_{x \to +\infty} \frac{4}{x^2+2 x-3}-0=0}$<br/>
 $\displaystyle{b=\lim_{x \to -\infty} \frac{4}{x^2+2 x-3}-kx = \lim_{x \to -\infty} \frac{4}{x^2+2 x-3}-0=0}$<br/>
-$y = 0$ - уравнение наклонной асимптоты.<br/>
+$y = 0$ - уравнение горизонтальной асимптоты. Наклонная асимптота совпадает с горизонтальной.<br/>
 <div class="link1"><script type="text/x-sage"># sage; task 1 
 x0='oo'; s='x='+str(x0)+' => '
 print(s+'k='+str([limit(y21/x,x=x0,dir='+'),limit(y21/x,x=x0,dir='-')]))
@@ -140,7 +140,7 @@ $\displaystyle{y '' = \frac{8 \ (3 x^2 + 6 x + 7)}{(x + 3)^3 (x- 1)^3} }$<br/>
 - значение второй производной в них равно нулю или не существует.<br/>
 В данном случае <br/>
 - $y\prime\prime (x)$ определена на всей $ D(y)= (-\infty; -3) \cup (-3; 1) \cup (1; +\infty)$,<br/>
-- $\nexists x \in \mathbb{R}: y\prime\prime (x) = 0$<br/>
+- $\nexists x \in \mathbb{R}: y \prime\prime (x) = 0$<br/>
 Промежутки выпуклости:<br/>
 <table style="width:50%" border="2">
   <tr><th>$x$</th><th>$(-\infty; -3)$</th><th>$-3$</th><th>$(-3; 1)$</th><th>$1$</th><th>$(1; +\infty)$</th></tr>
@@ -166,7 +166,7 @@ for x0 in [-4,0,4]:
 </script></div><br/> 
 8) Построим график функции.
 <div class="link1"><script type="text/x-sage"># sage; task 1 
-yb=10; cols=['steelblue','darkblue','magenta']; xra=[(-5.1,-3.1),(-2.9,0.9),(1.1,3.1)]
+yb=10; cols=['steelblue','darkblue','magenta']
 ll=['$%s$'%latex(y21.factor()),'$%s$'%latex(diff(y21,x).factor()),
     '$%s$'%latex(diff(y21,x,x).factor())]
 p=plot([y21.factor(),diff(y21,x).factor(),diff(y21,x,x).factor()],(-5,3),
@@ -203,22 +203,207 @@ pl.xlabel(r'$x$',fontsize=15); pl.ylabel(r'$y$',fontsize=15); pl.ylim(-10,10)
 pl.legend(fontsize=10,shadow=True,bbox_to_anchor=(.7,.45)); pl.show()
 </script></div><br/> 
   <h2>Task 2</h2>
+1) Найдем область определения функции и точки разрыва.<br/>
+$\displaystyle{y = 2 \ \ln \frac{x}{x-4}-3}$<br/>
+$\displaystyle{D(y)=(-\infty; 0) \cup (4; +\infty)}$<br/>
+$\displaystyle{\frac{x}{x-4}>0}$<br/>
+$\displaystyle{x = 0; x = 4}$ - точки разрыва второго рода.<br/> 
+2) Вычислим односторонние пределы функции<br/>
+- в граничных точках области определения, <br/>
+- в точках разрыва. <br/>
+Найдем вертикальные и горизонтальные асимптоты.<br/>
+$\displaystyle{\lim_{x \to +\infty} 2 \ \ln \frac{x}{x-4}-3=-3; \lim_{x \to +\infty}\ln \frac{x}{x-4}=+0}$<br/>
+$\displaystyle{\lim_{x \to -\infty} 2 \ \ln \frac{x}{x-4}-3=-3; \lim_{x \to -\infty}\ln \frac{x}{x-4}=-0}$<br/>
+$\displaystyle{\lim_{x \to 0+0} 2 \ \ln \frac{x}{x-4}-3=\lim_{x \to 0+0} \ln (1+\frac{4}{x-4})=\ln (1-1-0) \; \nexists }$<br/>
+$\displaystyle{\lim_{x \to 0-0} 2 \ \ln \frac{x}{x-4}-3=\lim_{x \to 0-0} \ln (1+\frac{4}{x-4})=\ln (1-1+0)=-\infty }$<br/>
+$\displaystyle{\lim_{x \to 4+0} 2 \ \ln \frac{x}{x-4}-3=\lim_{x \to 4+0} \ln (1+\frac{4}{x-4})=\ln (1+4/(4+0-4))=+\infty }$<br/>
+$\displaystyle{\lim_{x \to 4-0} 2 \ \ln \frac{x}{x-4}-3=\lim_{x \to 4-0} \ln (1+\frac{4}{x-4})=\ln (1+4/(4-0-4)) \; \nexists}$<br/>
+Прямые $x = 0, \ x = 4$ являются вертикальными асимптотами, прямая $y = -3$ - горизонтальной.<br/>
 <div class="link1"><script type="text/x-sage"># sage; task 2 (#8.21)
 var('x'); y21=2*ln(x/(x-4))-3
-
+pretty_print(html('$$y=%s$$'%latex(y21)))
+for x0 in ['oo',0,4]:
+    pretty_print('x='+str(x0)+ ' => right & left limits: %s'%[limit(y21,x=x0,dir='+'),limit(y21,x=x0,dir='-')])
 </script></div><br/>
-<div class="link2"><script type="text/x-sage"># sage; task 2
-
+<div class="link2"><script type="text/x-sage"># python; task 2
+import sympy as sp; import numpy as np; import pylab as pl
+x=sp.symbols('x'); y21=2*sp.ln(x/(x-4))-3; sp.pprint('y=%s'%y21)
+for x0 in ['oo',0,4]:
+    print('x='+str(x0)+ ' => right & left limits: %s'%\
+          [sp.limit(y21,x,x0,dir='+'),sp.limit(y21,x,x0,dir='-')])
+</script></div><br/>
+3) Проверим, является ли функция четной, нечетной, периодической.<br/>
+$\displaystyle{y(-x)=2 \ln \frac{-x}{-x-4}-3=2 \ln \frac{x}{x+4}-3 \implies y(-x) \neq y(x) \land y(-x) \neq -y(x)}$<br/>
+Функция не является четной или нечетной.<br/>
+Обозначим $ t \neq 0$ предполагаемый период функции.<br/>
+$\displaystyle{y(x+t)=y(x) \iff \frac{x+t}{x+t-4} = \frac{x}{x-4} \iff}$ <br/>
+$\displaystyle{\iff (x+t) (x-4)= x (x+t-4) \iff x^2+t x-4 x-4 t=x^2+t x -4x \iff 4 t=0 \iff t=0}$<br/>
+$\displaystyle{t \neq const}$<br/>
+Функция не является периодической.<br/>
+4) Найдем точки пересечения графика функции с осями координат.<br/>
+$\displaystyle{x=0 \notin D(y)}$<br/>
+$\displaystyle{2 \ln \frac{x}{x-4}-3=0 \implies x=\frac{4 e^{\frac{2}{3}}}{e^{\frac{2}{3}}-1}}$<br/>
+График функции не пересекает ось $Oy$ и пересекает ось $Ox$ в точке $x=\frac{4 e^{\frac{2}{3}}}{e^{\frac{2}{3}}-1} \approx 5.1$.<br/>
+<div class="link1"><script type="text/x-sage"># sage; task 2 
+pretty_print(html('$y=0 => %s = %s$'%(latex(solve(y21==0,x)[0]),solve(y21==0,x)[0].rhs().n())))
+pretty_print(html('$x=0 => y=%s$'%latex(y21(x=0))))
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+[y21(x=0),sp.solve(y21==0,x)[0], sp.solve(y21==0,x)[0].n()]
+</script></div><br/>
+5) Найдем наклонные асимпоты графика функции.<br/>
+Вычислим коэффициенты для прямой $y=kx+b$, являющейся наклонной асимптотой.<br/>  
+Наклонная асимптота совпадает с горизонтальной.<br/> 
+<div class="link1"><script type="text/x-sage"># sage; task 2 
+x0='oo'; s='x='+str(x0)+' => '
+print(s+'k='+str([limit(y21/x,x=x0,dir='+'),limit(y21/x,x=x0,dir='-')]))
+print(s+'b='+str([limit(y21-limit(y21/x,x=x0)*x,x=x0,dir='+'),
+                  limit(y21-limit(y21/x,x=x0)*x,x=x0,dir='-')]))
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+x0='oo'; s='x='+str(x0)+' => '
+print(s+'k='+str([sp.limit(y21/x,x,x0,'+'),sp.limit(y21/x,x,x0,'-')]))
+print(s+'b='+str([sp.limit(y21-sp.limit(y21/x,x,x0)*x,x,x0,'+'),
+                  sp.limit(y21-sp.limit(y21/x,x,x0)*x,x,x0,'-')]))
+</script></div><br/>
+6) Вычислим первую производную. Найдем точки локального экстремума и промежутки монотонности.<br/>
+$\displaystyle{y \prime = \bigg(2 \ln \frac{x}{x-4}-3 \bigg) \prime = 2 \bigg( \ln \frac{x}{x-4} \bigg) \prime =}$<br/>
+$\displaystyle{= 2 \frac{x-4}{x} \bigg(\frac{x}{x-4} \bigg) \prime = 2 \frac{x-4}{x} \frac{1*(x-4)-x*1}{(x-4)^2}=}$<br/>
+$\displaystyle{= 2 \frac{-4}{x (x-4)} = - \frac{8}{x^2-4 x}}$<br/>
+Функция может иметь локальный экстремум в критических точках, если:<br/>
+- функция определена и непрерывна в этих точках,<br/>
+- значение производной в них равно нулю или не существует.<br/>
+В данном случае производная функции определена на всей $D(y)= (-\infty; 0) \cup (4; +\infty)$,<br/>
+поэтому нужно найти только стационарные точки $x$, для которых $y \prime (x) = 0$<br/>
+<div class="link1"><script type="text/x-sage"># sage; task 2 
+pretty_print(html("$y'=%s$"%latex(factor(diff(y21,x)))))
+pretty_print(html("$y' \\neq 0 \; \\forall x: x \\in D(y)$"))
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+sp.pprint("𝑦′=%s"%sp.factor(sp.diff(y21,x)))
+sp.pprint("𝑦′≠0 ∀𝑥: x ∈ 𝐷(𝑦)")
+</script></div><br/>
+Точек экстремума нет. Промежутки монотонности:<br/>
+<table style="width:50%" border="2">
+  <tr><th>$x$</th><th>$(-\infty; 0)$</th><th>$0$</th><th>$4$</th><th>$(4; +\infty)$</th></tr>
+  <tr><td>$y \prime (x)$</td><td>$-$</td><td>$\nexists$</td><td>$\nexists$</td><td>$-$</td></tr>
+  <tr><td>$y (x)$</td><td>$\searrow$</td><td>$\nexists$</td><td>$\nexists$</td><td>$\searrow$</td></tr> 
+</table><br/>    
+<div class="link1"><script type="text/x-sage"># sage; task 2 
+print('x=x0 => [y(x0)        ,y(x0)≈              ,y(x0)>0,dy(x0),dy(x0)>0]')
+for x0 in [-6,-1,5,10]:
+    y021=y21(x=x0); dy021=diff(y21,x)(x=x0)
+    print('x='+str(x0)+' => '+str([y021,y021.n(),bool(y021>0),dy021,bool(dy021>0)]))
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+print('x=x0 => [y(x0)        ,y(x0)≈              ,y(x0)>0,dy(x0),dy(x0)>0]')
+for x0 in [-6,-1,5,10]:
+    y021=y21(x=x0); dy021=sp.diff(y21,x)(x=x0)
+    print('x='+str(x0)+' => '+str([y021,y021.n(),bool(y021>0),dy021,bool(dy021>0)]))
+</script></div><br/>
+7) Вычислим вторую производную. Найдем точки перегиба графика функции и промежутки выпуклости.<br/>
+$\displaystyle{y \prime \prime=\Bigg(-\frac{8}{x (x-4)}\Bigg) \prime=}$<br/> 
+$\displaystyle{=-8 \frac{0*x (x-4)-1*(x^2-4 x)\prime}{x^2 (x-4)^2}=-8 \frac{-(2 x-4)}{x^2 (x-4)^2}=}$<br/>
+$\displaystyle{=\frac{16 (x-2)}{x^2 (x-4)^2}}$<br/>
+Функция может иметь точки перегиба, если:<br/>
+- функция определена и непрерывна в этих точках,<br/>
+- значение второй производной в них равно нулю или не существует.<br/> 
+В данном случае вторая производная функции определена на всей $D(y)= (-\infty; 0) \cup (4; +\infty)$,<br/>
+поэтому нужно найти только стационарные точки $x$, для которых $y \prime \prime (x) = 0$<br/>
+$\displaystyle{y \prime \prime=0 \iff x=2, x=2 \not in D(y)}$
+<div class="link1"><script type="text/x-sage"># sage; task 2 
+pretty_print(html("$y''=%s"%latex(factor(diff(y21,x,x)))))
+print('x=x0 => [y(x0)        ,y(x0)≈              ,y(x0)>0,d2y(x0),d2y(x0)>0]')
+for x0 in [-6,-1,2,5,10]:
+    y021=y21(x=x0); d2y021=diff(y21,x,x)(x=x0)
+    print('x='+str(x0)+' => '+str([y021,y021.n(),bool(y021>0),d2y021,bool(d2y021>0)]))
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+print("y''=%s"%sp.factor(sp.diff(y21,x,x)))
+print('x=x0 => [y(x0)        ,y(x0)≈              ,y(x0)>0,d2y(x0),d2y(x0)>0]')
+for x0 in [-6,-1,2,5,10]:
+    y021=y21(x=x0); d2y021=sp.diff(y21,x,x)(x=x0)
+    print('x='+str(x0)+' => '+str([y021,y021.n(),bool(y021>0),d2y021,bool(d2y021>0)]))
+</script></div><br/>
+Функция не имеет точек перегиба. Промежутки выпуклости:<br/>
+<table style="width:50%" border="2">
+  <tr><th>$x$</th><th>$(-\infty; 0)$</th><th>$0$</th><th>$4$</th><th>$(4; +\infty)$</th></tr>
+  <tr><td>$y\prime\prime (x)$</td><td>$-$</td><td>$\nexists$</td><td>$\nexists$</td><td>$+$</td></tr>
+  <tr><td>$y (x)$</td><td>$\cap$</td><td>$\nexists$</td><td>$\nexists$</td><td>$\cup$</td></tr>
+</table><br/>
+8) Построим график функции.
+<div class="link1"><script type="text/x-sage"># sage; task 2 
+set_verbose(-1); var('x'); y21=2*ln(x/(x-4))-3
+yb=5; xb=15; cols=['steelblue','darkblue','magenta'];
+ll=['$y=%s$'%latex(y21),'$y\prime=%s$'%latex(diff(y21,x).factor()),
+    '$y\prime\prime=%s$'%latex(diff(y21,x,x).factor())]
+p=plot([y21,diff(y21,x),diff(y21,x,x)],(-xb,xb),color=cols,thickness=1.5,legend_label=ll)
+p+=line([[0,-yb],[0,yb]],color='darkred',linestyle='--',thickness=3,legend_label='$x=0$')
+p+=line([[4,-yb],[4,yb]],color='red',linestyle='-.',thickness=3,legend_label='$x=4$')
+p+=line([[-xb,-3],[xb,-3]],color='darkorange',linestyle=':',thickness=3,legend_label='$y=-3$')
+p.set_legend_options(font_size=15,loc=2); p.show(gridlines=True,figsize=(8,8),ymin=-yb,ymax=yb)
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+x=sp.symbols('x'); y21=y21=2*sp.ln(x/(x-4))-3 
+p=sp.plot(y21,(x,-15,-.1),ylim=(-5,5),show=False,legend='automatic') 
+p.extend(sp.plot(y21,(x,.1,3.9),show=False)); p.extend(sp.plot(y21,(x,4.1,15),show=False))
+p.extend(sp.plot(sp.diff(y21,x).factor(),(x,-15,15),line_color=(.1,.1,.7),show=False))
+p.extend(sp.plot(sp.diff(y21,x,x).factor(),(x,-15,15),line_color=(.9,.1,.9),show=False)) 
+p.extend(sp.plot(-3,(x,-15,15),line_color=(.9,.1,.1),show=False)); p.show()
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 2
+x1=np.linspace(-15,-.1); x2=np.linspace(.1,3.9); x3=np.linspace(4.1,15)
+xa=[x1,x2,x3]; y21=lambda x: 2*np.log(x/(x-4))-3
+dy21=lambda x: -8/(x**2-4*x)
+d2y21=lambda x: 16*(x-2)/((x-4)**2*x**2)
+pl.figure(figsize=(9,9)); pl.grid(c='steelblue',ls='--',lw=0.5)
+ll1=[r'$y = 2\ln \frac{x}{x-4} -3$',r'$y = -\frac{8}{x^2-4 x}} $',
+     r'$y = \frac{16 (x-2)}{x^2 (x-4)^2}$']
+ll2=[r'$x \in (-15; -0.1)$',r'$x \in (0.1; 3.9)$',r'$x \in (4.1; 15)$']
+for i in range(3):
+    if i!=1:
+        pl.plot(xa[i],y21(xa[i]),c='steelblue',lw=3,label=ll1[0]+','+ll2[i])
+    pl.plot(xa[i],dy21(xa[i]),c='darkblue',lw=1,label=ll1[1]+','+ll2[i])
+    pl.plot(xa[i],d2y21(xa[i]),c='magenta',lw=1,label=ll1[2]+','+ll2[i])
+pl.axvline(0,c='darkred',ls='--',lw=2,label='$x = 0$')
+pl.axvline(4,c='red',ls='--',lw=2,label='$x = 4$')
+pl.axhline(-3,c='darkorange',ls='--',lw=2,label='$y = -3$')
+pl.xlabel(r'$x$',fontsize=15); pl.ylabel(r'$y$',fontsize=15); pl.ylim(-5,5)
+pl.legend(fontsize=10,shadow=True,bbox_to_anchor=(.3,1.1)); pl.show()
 </script></div><br/>
   <h2>Task 3</h2>
+1) Найдем область определения функции и точки разрыва.<br/>
+2) Вычислим односторонние пределы функции<br/>
+- в граничных точках области определения, <br/>
+- в точках разрыва. <br/>
+Найдем вертикальные асимптоты.<br/>
 <div class="link1"><script type="text/x-sage"># sage; task 3 (#9.21)
 var('x'); y21=(x-2)^(2/3)-(x-3)^(2/3)
 y21c=sign(x-2)*(abs(x-2))^(2/3)-sign(x-3)*(abs(x-3))^(2/3)
 
 </script></div><br/>
-<div class="link2"><script type="text/x-sage"># sage; task 3
+<div class="link2"><script type="text/x-sage"># python; task 3
+import sympy as sp; import numpy as np; import pylab as pl
+x=sp.symbols('x'); y21=(x-2)**(2/3)-(x-3)**(2/3); sp.pprint('y=%s'%y21)
+y21c=sp.sign(x-2)*(abs(x-2))**(2/3)-sp.sign(x-3)*(abs(x-3))**(2/3)
 
-</script></div><br/>    
+</script></div><br/>
+<div class="link1"><script type="text/x-sage"># sage; task 3 
+
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 3
+
+</script></div><br/> 
+8) Построим график функции.
+<div class="link1"><script type="text/x-sage"># sage; task 3 
+
+</script></div><br/>
+<div class="link2"><script type="text/x-sage"># python; task 3
+
+</script></div><br/> 
+<div class="link2"><script type="text/x-sage"># python; task 3
+
+</script></div><br/> 
    <h2>Cells for Your Experiments</h2>
 <div class="sage"><script type="text/x-sage"># sage 
 </script></div><br/>
