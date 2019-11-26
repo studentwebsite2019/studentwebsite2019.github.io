@@ -5,7 +5,7 @@
 ## Contents
 
 <details>
-<summary>Maths</summary>
+<summary>&#x1F300; &nbsp; Maths</summary>
 
 ### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/mathTF1319W.html)
 ### [Standard Calculation. Google Colab](https://colab.research.google.com/drive/1MT0iq9l_Hzeh6FTbicvLuVdvNbV6J82p)
