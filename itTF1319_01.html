@@ -27,9 +27,23 @@
 <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">&#x1F300; &nbsp; LaTeX for Mathematics &nbsp;</a>
 <div class="compute"><script>
 # sage 
-f(x)=(sin(x*pi/2)+x^(1/5))/(sqrt(abs(cos(pi*x)+1))*exp(1)^sqrt(x))
-a,b=2,3; t=[[N(x),N(f(x))] for x in srange(a,b,(b-a)/12)]
-line(t).show(gridlines=True); table([['x','f(x)']]+t)
+var('x'); A,B,N=.55,1,10; X1,X2=1000,6000
+def F(f,x,a,b): 
+    try: return round(f(x),4)
+    except: return NaN
+    if a>=b: return NaN
+def create_table(f,a,b,n):
+    d=(b-a)/(n-1); x0=randint(X1,X2)*.1^4    
+    t=[[round(x,4),F(f,x,a,b)] for x in srange(a,b+d,d)]
+    pretty_print(html(latex(f)))
+    pretty_print(html('x=%.4f ↦ f(x)=%s'%(x0,F(f,x0,a,b))))
+    show(table([['x','f(x)']]+t))
+    return t
+def create_plottable(f,a,b,n): 
+    t=create_table(f,a,b,n)
+    list_plot(t).show(gridlines=True,figsize=4)
+f21(x)=(sin(x*pi/2)+x^(1/5))/(sqrt(abs(cos(pi*x)+1))*exp(sqrt(x)))
+create_plottable(f21,A,B,N)
 </script></div><br/>
 <div class="compute"><script>
 # sage
