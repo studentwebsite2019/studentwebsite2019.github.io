@@ -8,10 +8,10 @@
 <summary>&#x1F300; &nbsp; Maths</summary>
 
 Wolfram Cloud<br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319W.html">🌀 Standard Calculations. Part 1</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319W.html">🌀 Standard Calculations. Part 1</a><br/><br/>
 Google Colaboratory<br/>     
 <a href="https://colab.research.google.com/drive/1MT0iq9l_Hzeh6FTbicvLuVdvNbV6J82p">📓 Standard Calculations. Part 1</a><br/>
-<a href="https://colab.research.google.com/drive/1VF7zOPBWvfhnfUXfOgSgLnz65MiC4ULh">📓 Standard Calculations. Part 2</a><br/>
+<a href="https://colab.research.google.com/drive/1VF7zOPBWvfhnfUXfOgSgLnz65MiC4ULh">📓 Standard Calculations. Part 2</a><br/><br/>
 SageMathCell<br/>
 <a href="https://studentwebsite2019.github.io/mathTF1319_01.html">🌀 Standard Calculation 1</a><br/>
 <a href="https://studentwebsite2019.github.io/mathTF1319_02.html">🌀 Standard Calculation 2</a><br/>
@@ -30,17 +30,17 @@ SageMathCell<br/>
 </details><br/><br/>
 
 <details>
-<summary>&#x1F300; &nbsp; IT</summary>
+<summary>📑 IT</summary>
   
 Wolfram Cloud<br/>
-<a href="https://studentwebsite2019.github.io/itTF1319W.html">🌀 Standard Calculations. Part 1</a><br/>
+<a href="https://studentwebsite2019.github.io/itTF1319W.html">🌀 Standard Calculations. Part 1</a><br/><br/>
 Google Colaboratory<br/>     
-<a href="https://colab.research.google.com/drive/1c1iJqa66AdXCwUru2aRfbAg4j-CGLVRe">📓 Standard Calculations. Part 1</a><br/>
+<a href="https://colab.research.google.com/drive/1c1iJqa66AdXCwUru2aRfbAg4j-CGLVRe">📓 Standard Calculations. Part 1</a><br/><br/>
 SageMathCell<br/>
 <a href="https://studentwebsite2019.github.io/itTF1319_01.html">🌀 Standard Calculation 1</a><br/>
 <a href="https://studentwebsite2019.github.io/itTF1319_02.html">🌀 Standard Calculation 2</a><br/>
 <a href="https://studentwebsite2019.github.io/itTF1319_03.html">🌀 Standard Calculation 3</a><br/>
-<a href="https://studentwebsite2019.github.io/itTF1319_04.html">🌀 Standard Calculation 4</a><br/>
+<a href="https://studentwebsite2019.github.io/itTF1319_04.html">🌀 Standard Calculation 4</a><br/><br/>
 LabWorks<br/>
 <a href="https://docs.google.com/document/d/15g3Hm42l0WJaqMxwerUl2HWQxJFOpKgrvaEuuURwWLo">📑 № 1</a><br/>
 <a href="https://docs.google.com/document/d/1qahs_lncNFbVxrEggxDzxutKP7DOKf1EVXtvvZvGz10">📑 № 2</a><br/>
@@ -58,9 +58,9 @@ LabWorks<br/>
 
 </details><br/><br/>
 
-## Physics
+## 📑 Physics
 
-## Chemistry
+## 📑 Chemistry
 <br/><br/>
 <h1>🏙 &nbsp; Home Website Sources</h1>
 
