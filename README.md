@@ -41,7 +41,7 @@
 ---
 
 <details>
-<summary>📑 Linear Algebra. Practice (in Russian)</summary>
+<summary>📑 Linear Algebra. Practice (in Russian)</summary><br/><br/>
 
 <a href="https://olgabelitskaya.github.io/linear_algebra_practice/work0.html"> 🌀 № 0</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/linear_algebra_practice/work1.html"> 🌀 № 1</a> &nbsp; &nbsp;
@@ -62,26 +62,26 @@
 </details>
 
 <details>
-<summary>📑 SageMathCell Practice & IT Studying Tasks</summary>
+<summary>📑 SageMathCell Practice & IT Studying Tasks</summary><br/><br/>
 
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_1_Task_1_2.html"> 🌀 Task 1.1. Task1.2</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_3_1.html"> 🌀 Task 1.3.1</a> &nbsp; &nbsp; 
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_3_2.html"> 🌀 Task 1.3.2</a> &nbsp; &nbsp;
-<a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_3_3.html"> 🌀 Task 1.3.3</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_3_3.html"> 🌀 Task 1.3.3</a> <br/><br/>
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_4_1.html"> 🌀 Task 1.4.1</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_4_2.html"> 🌀 Task 1.4.2</a> &nbsp; &nbsp; 
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_4_3.html"> 🌀 Task 1.4.3</a><br/><br/>
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_5.html"> 🌀 Task 1.5</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_6.html"> 🌀 Task 1.6</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_7.html"> 🌀 Task 1.7</a> &nbsp; &nbsp;
-<a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_8.html"> 🌀 Task 1.8</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_8.html"> 🌀 Task 1.8</a> <br/><br/>
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_9_1.html"> 🌀 Task 1.9.1</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_9_2.html"> 🌀 Task 1.9.2</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_9_3.html"> 🌀 Task 1.9.3</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_1_9_4.html"> 🌀 Task 1.9.4</a><br/><br/>
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_2.html"> 🌀 Task 2.2</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_3.html"> 🌀 Task 2.3</a> &nbsp; &nbsp;
-<a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_4.html"> 🌀 Task 2.4</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_4.html"> 🌀 Task 2.4</a> <br/><br/>
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_5_1.html"> 🌀 Task 2.5.1</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_5_2.html"> 🌀 Task 2.5.2</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_2_5_3.html"> 🌀 Task 2.5.3</a> &nbsp; &nbsp;
