@@ -42,19 +42,19 @@ SageMathCell<br/>
 <a href="https://studentwebsite2019.github.io/itTF1319_03.html">🌀 № 3</a> &nbsp; &nbsp;
 <a href="https://studentwebsite2019.github.io/itTF1319_04.html">🌀 № 4</a><br/><br/>
 LabWorks<br/>
-<a href="https://docs.google.com/document/d/15g3Hm42l0WJaqMxwerUl2HWQxJFOpKgrvaEuuURwWLo">📑 № 1</a><br/>
-<a href="https://docs.google.com/document/d/1qahs_lncNFbVxrEggxDzxutKP7DOKf1EVXtvvZvGz10">📑 № 2</a><br/>
-<a href="https://docs.google.com/document/d/1aSbf2zEQRXJ728eMVgP1HJXz2dRR4sQC-f-65aHnOT0">📑 № 3</a><br/>
-<a href="https://docs.google.com/document/d/1b7o0D6wCijJidhQmmQheDaqLvLEy_LnmSUrZWBsX5Jg">📑 № 4</a><br/>
-<a href="https://docs.google.com/document/d/1b2ziteabKv_FaR9Z9sXLvVuJ3QyN-ksDwzSWQXn_gME">📑 № 5</a><br/>
-<a href="https://docs.google.com/document/d/1x9ZzUw5v-J5q6uZenXASNhIbSLFRANUL8jE2i1iditQ">📑 № 6</a><br/>
+<a href="https://docs.google.com/document/d/15g3Hm42l0WJaqMxwerUl2HWQxJFOpKgrvaEuuURwWLo">📑 № 1</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1qahs_lncNFbVxrEggxDzxutKP7DOKf1EVXtvvZvGz10">📑 № 2</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1aSbf2zEQRXJ728eMVgP1HJXz2dRR4sQC-f-65aHnOT0">📑 № 3</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1b7o0D6wCijJidhQmmQheDaqLvLEy_LnmSUrZWBsX5Jg">📑 № 4</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1b2ziteabKv_FaR9Z9sXLvVuJ3QyN-ksDwzSWQXn_gME">📑 № 5</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1x9ZzUw5v-J5q6uZenXASNhIbSLFRANUL8jE2i1iditQ">📑 № 6</a> &nbsp; &nbsp;
 <a href="https://docs.google.com/document/d/1nt93DgaLz6KazU12X8sp6a_W9PkOAXoaYUtQUtd4-EM">📑 № 7</a><br/>
-<a href="https://docs.google.com/document/d/10ycOFJnu3CBLfcH3qb-PrT-3UgFBuS4ZBvhpCLELPeY">📑 № 8</a><br/>
-<a href="https://docs.google.com/document/d/1Z_9ldVTFs5wkjK3TU3Clib7pkD0nVqhNJzlhIdfwUZE">📑 № 9</a><br/>
-<a href="https://docs.google.com/document/d/1Yvt6AaV7HWrir117VMG_G4kb-IAcCwGBprKbuB8TPZY">📑 № 10</a><br/>
-<a href="https://docs.google.com/document/d/1OnVT1f6RmmfzezaynuYaT7ZC3-mv38Re-xLFHqZi7JE">📑 № 11</a><br/>
-<a href="https://docs.google.com/document/d/1RhFsUdJWjplfGeYpEV2DZ2toC6Y7lJXgdaZyyqUvs3Q">📑 № 12</a><br/>
-<a href="https://docs.google.com/document/d/1lWVOZi7Qo4bLpLg2ZD753TIJ43hRLzNxTsgofIzIUHI">📑 № 13</a><br/>
+<a href="https://docs.google.com/document/d/10ycOFJnu3CBLfcH3qb-PrT-3UgFBuS4ZBvhpCLELPeY">📑 № 8</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1Z_9ldVTFs5wkjK3TU3Clib7pkD0nVqhNJzlhIdfwUZE">📑 № 9</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1Yvt6AaV7HWrir117VMG_G4kb-IAcCwGBprKbuB8TPZY">📑 № 10</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1OnVT1f6RmmfzezaynuYaT7ZC3-mv38Re-xLFHqZi7JE">📑 № 11</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1RhFsUdJWjplfGeYpEV2DZ2toC6Y7lJXgdaZyyqUvs3Q">📑 № 12</a> &nbsp; &nbsp;
+<a href="https://docs.google.com/document/d/1lWVOZi7Qo4bLpLg2ZD753TIJ43hRLzNxTsgofIzIUHI">📑 № 13</a><br/><br/>
 
 </details><br/><br/>
 
