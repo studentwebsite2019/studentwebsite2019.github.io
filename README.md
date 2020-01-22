@@ -5,7 +5,7 @@
 ## Contents
 
 <details>
-<summary>&#x1F300; &nbsp; Maths</summary>
+<summary>📑 Maths</summary>
 
 Wolfram Cloud<br/>
 <a href="https://studentwebsite2019.github.io/mathTF1319W.html">🌀 Standard Calculations. Part 1</a><br/><br/>
@@ -58,9 +58,9 @@ LabWorks<br/>
 
 </details><br/><br/>
 
-## 📑 Physics
+### 📑 Physics
 
-## 📑 Chemistry
+### 📑 Chemistry
 <br/><br/>
 <h1>🏙 &nbsp; Home Website Sources</h1>
 
