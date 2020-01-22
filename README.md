@@ -1,4 +1,4 @@
-# &#x1F3D9; &nbsp; Student Website for Pages with Exercises
+<h1>🏙 &nbsp; Student Website for Pages with Exercises</h1>
 
 ---
 
@@ -7,36 +7,62 @@
 <details>
 <summary>&#x1F300; &nbsp; Maths</summary>
 
-### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/mathTF1319W.html)
-### [Standard Calculation. Google Colab](https://colab.research.google.com/drive/1MT0iq9l_Hzeh6FTbicvLuVdvNbV6J82p)
-### [Standard Calculation. Page 1](https://studentwebsite2019.github.io/mathTF1319_01.html)
-### [Standard Calculation. Page 2](https://studentwebsite2019.github.io/mathTF1319_02.html)
-### [Standard Calculation. Page 3](https://studentwebsite2019.github.io/mathTF1319_03.html)
-### [Standard Calculation. Page 4](https://studentwebsite2019.github.io/mathTF1319_04.html)
-### [Standard Calculation. Page 5](https://studentwebsite2019.github.io/mathTF1319_05.html)
-### [Standard Calculation. Page 9](https://studentwebsite2019.github.io/mathTF1319_09.html)
-### [Standard Calculation. Page 11](https://studentwebsite2019.github.io/mathTF1319_11.html)
-### [Standard Calculation. Page 12](https://studentwebsite2019.github.io/mathTF1319_12.html)
-### [Standard Calculation. Page 13](https://studentwebsite2019.github.io/mathTF1319_13.html)
-### [Homework. Part 1](https://studentwebsite2019.github.io/mathTF1319_hw01.html)
+Wolfram Cloud<br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319W.html">🌀 Standard Calculations. Part 1</a><br/>
+Google Colaboratory<br/>     
+<a href="https://colab.research.google.com/drive/1MT0iq9l_Hzeh6FTbicvLuVdvNbV6J82p">📓 Standard Calculations. Part 1</a><br/>
+<a href="https://colab.research.google.com/drive/1VF7zOPBWvfhnfUXfOgSgLnz65MiC4ULh">📓 Standard Calculations. Part 2</a><br/>
+SageMathCell<br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_01.html">🌀 Standard Calculation 1</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_02.html">🌀 Standard Calculation 2</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_03.html">🌀 Standard Calculation 3</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_04.html">🌀 Standard Calculation 4</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_05.html">🌀 Standard Calculation 5</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_09.html">🌀 Standard Calculation 9</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_11.html">🌀 Standard Calculation 11</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_12.html">🌀 Standard Calculation 12</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_13.html">🌀 Standard Calculation 13</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_14.html">🌀 Standard Calculation 14</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_15.html">🌀 Standard Calculation 15</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_16.html">🌀 Standard Calculation 16</a><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_17.html">🌀 Standard Calculation 17</a><br/>  
 
-</details>
+</details><br/><br/>
 
 <details>
 <summary>&#x1F300; &nbsp; IT</summary>
   
-### [Standard Calculation. WolframCloud](https://studentwebsite2019.github.io/itTF1319W.html)
-### [Standard Calculation. Google Colab](https://colab.research.google.com/drive/1c1iJqa66AdXCwUru2aRfbAg4j-CGLVRe)
-### [Standard Calculation. Page 1](https://studentwebsite2019.github.io/itTF1319_01.html)
-### [Standard Calculation. Page 2](https://studentwebsite2019.github.io/itTF1319_02.html)
-### [Standard Calculation. Page 3](https://studentwebsite2019.github.io/itTF1319_03.html)
-### [Standard Calculation. Page 4](https://studentwebsite2019.github.io/itTF1319_04.html)
+Wolfram Cloud<br/>
+<a href="https://studentwebsite2019.github.io/itTF1319W.html">🌀 Standard Calculations. Part 1</a><br/>
+Google Colaboratory<br/>     
+<a href="https://colab.research.google.com/drive/1c1iJqa66AdXCwUru2aRfbAg4j-CGLVRe">📓 Standard Calculations. Part 1</a><br/>
+SageMathCell<br/>
+<a href="https://studentwebsite2019.github.io/itTF1319_01.html">🌀 Standard Calculation 1</a><br/>
+<a href="https://studentwebsite2019.github.io/itTF1319_02.html">🌀 Standard Calculation 2</a><br/>
+<a href="https://studentwebsite2019.github.io/itTF1319_03.html">🌀 Standard Calculation 3</a><br/>
+<a href="https://studentwebsite2019.github.io/itTF1319_04.html">🌀 Standard Calculation 4</a><br/>
+LabWorks<br/>
+<a href="https://docs.google.com/document/d/15g3Hm42l0WJaqMxwerUl2HWQxJFOpKgrvaEuuURwWLo">📑 № 1</a><br/>
+<a href="https://docs.google.com/document/d/1qahs_lncNFbVxrEggxDzxutKP7DOKf1EVXtvvZvGz10">📑 № 2</a><br/>
+<a href="https://docs.google.com/document/d/1aSbf2zEQRXJ728eMVgP1HJXz2dRR4sQC-f-65aHnOT0">📑 № 3</a><br/>
+<a href="https://docs.google.com/document/d/1b7o0D6wCijJidhQmmQheDaqLvLEy_LnmSUrZWBsX5Jg">📑 № 4</a><br/>
+<a href="https://docs.google.com/document/d/1b2ziteabKv_FaR9Z9sXLvVuJ3QyN-ksDwzSWQXn_gME">📑 № 5</a><br/>
+<a href="https://docs.google.com/document/d/1x9ZzUw5v-J5q6uZenXASNhIbSLFRANUL8jE2i1iditQ">📑 № 6</a><br/>
+<a href="https://docs.google.com/document/d/1nt93DgaLz6KazU12X8sp6a_W9PkOAXoaYUtQUtd4-EM">📑 № 7</a><br/>
+<a href="https://docs.google.com/document/d/10ycOFJnu3CBLfcH3qb-PrT-3UgFBuS4ZBvhpCLELPeY">📑 № 8</a><br/>
+<a href="https://docs.google.com/document/d/1Z_9ldVTFs5wkjK3TU3Clib7pkD0nVqhNJzlhIdfwUZE">📑 № 9</a><br/>
+<a href="https://docs.google.com/document/d/1Yvt6AaV7HWrir117VMG_G4kb-IAcCwGBprKbuB8TPZY">📑 № 10</a><br/>
+<a href="https://docs.google.com/document/d/1OnVT1f6RmmfzezaynuYaT7ZC3-mv38Re-xLFHqZi7JE">📑 № 11</a><br/>
+<a href="https://docs.google.com/document/d/1RhFsUdJWjplfGeYpEV2DZ2toC6Y7lJXgdaZyyqUvs3Q">📑 № 12</a><br/>
+<a href="https://docs.google.com/document/d/1lWVOZi7Qo4bLpLg2ZD753TIJ43hRLzNxTsgofIzIUHI">📑 № 13</a><br/>
 
-</details>
+</details><br/><br/>
 
 ## Physics
 
 ## Chemistry
+<br/><br/>
+<h1>🏙 &nbsp; Home Website Sources</h1>
 
 ---
 
@@ -59,7 +85,7 @@
 <a href="https://olgabelitskaya.github.io/linear_algebra_practice/work13.html"> 🌀 № 13</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/linear_algebra_practice/work14.html"> 🌀 № 14</a>
 
-</details>
+</details><br/><br/>
 
 <details>
 <summary>📑 SageMathCell Practice & IT Studying Tasks</summary><br/><br/>
