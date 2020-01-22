@@ -43,22 +43,21 @@
 <details>
 <summary> &#x1F300; &nbsp; Linear Algebra. Practice (in Russian)</summary>
 
-### &#x1F4D1; &nbsp; [№ 0](https://olgabelitskaya.github.io/linear_algebra_practice/work0.html) 
-### &#x1F4D1; &nbsp; [№ 1](https://olgabelitskaya.github.io/linear_algebra_practice/work1.html) 
-### &#x1F4D1; &nbsp; [№ 2](https://olgabelitskaya.github.io/linear_algebra_practice/work2.html) 
-### &#x1F4D1; &nbsp; [№ 3](https://olgabelitskaya.github.io/linear_algebra_practice/work3.html) 
-### &#x1F4D1; &nbsp; [№ 4](https://olgabelitskaya.github.io/linear_algebra_practice/work4.html)
-### &#x1F4D1; &nbsp; [№ 5](https://olgabelitskaya.github.io/linear_algebra_practice/work5.html) 
-### &#x1F4D1; &nbsp; [№ 6](https://olgabelitskaya.github.io/linear_algebra_practice/work6.html) 
-### &#x1F4D1; &nbsp; [№ 7](https://olgabelitskaya.github.io/linear_algebra_practice/work7.html) 
-### &#x1F4D1; &nbsp; [№ 8](https://olgabelitskaya.github.io/linear_algebra_practice/work8.html) 
-### &#x1F4D1; &nbsp; [№ 9](https://olgabelitskaya.github.io/linear_algebra_practice/work9.html) 
-### &#x1F4D1; &nbsp; [№ 10](https://olgabelitskaya.github.io/linear_algebra_practice/work10.html) 
-### &#x1F4D1; &nbsp; [№ 11](https://olgabelitskaya.github.io/linear_algebra_practice/work11.html) 
-### &#x1F4D1; &nbsp; [№ 12](https://olgabelitskaya.github.io/linear_algebra_practice/work12.html)
-### &#x1F4D1; &nbsp; [№ 13](https://olgabelitskaya.github.io/linear_algebra_practice/work13.html) 
-### &#x1F4D1; &nbsp; [№ 14](https://olgabelitskaya.github.io/linear_algebra_practice/work14.html) 
-
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work0.html"> 🌀 № 0</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work1.html"> 🌀 № 1</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work2.html"> 🌀 № 2</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work3.html"> 🌀 № 3</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work4.html"> 🌀 № 4</a><br/>
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work5.html"> 🌀 № 5</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work6.html"> 🌀 № 6</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work7.html"> 🌀 № 7</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work8.html"> 🌀 № 8</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work9.html"> 🌀 № 9</a><br/>
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work10.html"> 🌀 № 10</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work11.html"> 🌀 № 11</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work12.html"> 🌀 № 12</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work13.html"> 🌀 № 13</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/linear_algebra_practice/work14.html"> 🌀 № 14</a><br/>
 </details>
 
 <br>[⬆ Back to top](#Contents)
