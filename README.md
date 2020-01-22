@@ -5,42 +5,42 @@
 ## Contents
 
 <details>
-<summary>📑 Maths</summary>
-
+<summary>📑 Maths</summary><br/><br/>
+  
 Wolfram Cloud<br/>
 <a href="https://studentwebsite2019.github.io/mathTF1319W.html">🌀 Standard Calculations. Part 1</a><br/><br/>
 Google Colaboratory<br/>     
 <a href="https://colab.research.google.com/drive/1MT0iq9l_Hzeh6FTbicvLuVdvNbV6J82p">📓 Standard Calculations. Part 1</a><br/>
 <a href="https://colab.research.google.com/drive/1VF7zOPBWvfhnfUXfOgSgLnz65MiC4ULh">📓 Standard Calculations. Part 2</a><br/><br/>
 SageMathCell<br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_01.html">🌀 Standard Calculation 1</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_02.html">🌀 Standard Calculation 2</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_03.html">🌀 Standard Calculation 3</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_04.html">🌀 Standard Calculation 4</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_05.html">🌀 Standard Calculation 5</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_09.html">🌀 Standard Calculation 9</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_11.html">🌀 Standard Calculation 11</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_12.html">🌀 Standard Calculation 12</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_13.html">🌀 Standard Calculation 13</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_14.html">🌀 Standard Calculation 14</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_15.html">🌀 Standard Calculation 15</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_16.html">🌀 Standard Calculation 16</a><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319_17.html">🌀 Standard Calculation 17</a><br/>  
+<a href="https://studentwebsite2019.github.io/mathTF1319_01.html">🌀 № 1</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_02.html">🌀 № 2</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_03.html">🌀 № 3</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_04.html">🌀 № 4</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_05.html">🌀 № 5</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_09.html">🌀 № 9</a> <br/><br/>
+<a href="https://studentwebsite2019.github.io/mathTF1319_11.html">🌀 № 11</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_12.html">🌀 № 12</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_13.html">🌀 № 13</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_14.html">🌀 № 14</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_15.html">🌀 № 15</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_16.html">🌀 № 16</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/mathTF1319_17.html">🌀 № 17</a> <br/><br/>
 
 </details><br/><br/>
 
 <details>
-<summary>📑 IT</summary>
+<summary>📑 IT</summary><br/><br/>  
   
 Wolfram Cloud<br/>
 <a href="https://studentwebsite2019.github.io/itTF1319W.html">🌀 Standard Calculations. Part 1</a><br/><br/>
 Google Colaboratory<br/>     
 <a href="https://colab.research.google.com/drive/1c1iJqa66AdXCwUru2aRfbAg4j-CGLVRe">📓 Standard Calculations. Part 1</a><br/><br/>
 SageMathCell<br/>
-<a href="https://studentwebsite2019.github.io/itTF1319_01.html">🌀 Standard Calculation 1</a><br/>
-<a href="https://studentwebsite2019.github.io/itTF1319_02.html">🌀 Standard Calculation 2</a><br/>
-<a href="https://studentwebsite2019.github.io/itTF1319_03.html">🌀 Standard Calculation 3</a><br/>
-<a href="https://studentwebsite2019.github.io/itTF1319_04.html">🌀 Standard Calculation 4</a><br/><br/>
+<a href="https://studentwebsite2019.github.io/itTF1319_01.html">🌀 № 1</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/itTF1319_02.html">🌀 № 2</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/itTF1319_03.html">🌀 № 3</a> &nbsp; &nbsp;
+<a href="https://studentwebsite2019.github.io/itTF1319_04.html">🌀 № 4</a><br/><br/>
 LabWorks<br/>
 <a href="https://docs.google.com/document/d/15g3Hm42l0WJaqMxwerUl2HWQxJFOpKgrvaEuuURwWLo">📑 № 1</a><br/>
 <a href="https://docs.google.com/document/d/1qahs_lncNFbVxrEggxDzxutKP7DOKf1EVXtvvZvGz10">📑 № 2</a><br/>
@@ -62,6 +62,7 @@ LabWorks<br/>
 
 ### 📑 Chemistry
 <br/><br/>
+
 <h1>🏙 &nbsp; Home Website Sources</h1>
 
 ---
@@ -116,6 +117,6 @@ LabWorks<br/>
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_3_1_1.html"> 🌀 Task 3.3.1</a> &nbsp; &nbsp;
 <a href="https://olgabelitskaya.github.io/it_mini_campus/Task_3_1_2.html"> 🌀 Task 3.3.2</a> &nbsp; &nbsp;
 
-</details>
+</details><br/><br/>
 
-<br>[⬆ Back to top](#Contents)
+[⬆ Back to top](#Contents)
