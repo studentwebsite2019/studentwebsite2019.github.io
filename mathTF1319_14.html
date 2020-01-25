@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Maths_TF1319_14</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function(){sagecell.makeSagecell({inputLocation:'div.sage',evalButtonText:'Run Detached Cells'});});
+    </script>
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Orbitron');
+  h1, h2 {color:#3636ff; font-family:'Orbitron'; text-shadow:5px 5px 5px #aaa;}
+  .sagecell .CodeMirror-scroll {min-height:3em; max-height:68em;}
+  body: {margin:5px 5px 5px 15px;}
+  </style>  
+  <body>
+  <h1>&#x1F4D1; &nbsp;Maths. TF1319. Standard Calculation 14</h1>
+<a href="https://studentwebsite2019.github.io/index.html">&#x1F300; &nbsp; Student Website Home Page &nbsp; &nbsp;</a> &nbsp; &nbsp;
+<a href="https://olgabelitskaya.github.io/README_EXERCISES.html">&#x1F300; &nbsp; Various Exam Exercises &nbsp; &nbsp;</a><br/>
+Find integrals  
+  <h2>Task 1</h2>
+<div class="sage"><script type="text/x-sage"># sage; task 1
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+f21(a,b,x)=x*(a*x^2+b)^(1/3)
+intf21(a,b,x)=ii(f21(a,b,x),x)
+pretty_print(html(r'$\displaystyle{f(x)=%s=>\int f(x)\;dx=%s}$'\
+                  %(latex(f21(a,b,x)),latex(intf21(a,b,x)))))
+plot([f21(1,1,x),intf21(1,1,x)],(-10,10),
+     legend_label='automatic',gridlines='True')
+</script></div><br/>
+<div class="sage"><script type="text/x-sage"># python; task 1
+import sympy as sp
+</script></div><br/>
+  <h2>Task 2</h2>
+<div class="sage"><script type="text/x-sage"># sage; task 2
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+set_verbose(-1)
+f21(x)=x^3/(x+1); intf21(x)=ii(f21(x),x)
+f211(x)=(x^3+1)/(x+1); intf211(x)=ii(f211(x),x)
+f212(x)=-1/(x+1); intf212(x)=ii(f212(x),x)
+st21=r'$f(x)=g(x)+h(x)=%s => \int f(x) dx= %s$'
+st211=r'$g(x)=%s=%s=> \int g(x) dx= %s$'
+st212=r'$h(x)=%s => \int h(x) dx= %s$'
+pretty_print(html(st21%(latex(f21(x)),
+                        latex(intf21(x)))))
+pretty_print(html(st211%(latex(f211(x)),
+                         latex(factor(f211(x))),
+                         latex(intf211(x)))))
+pretty_print(html(st212%(latex(f212(x)),
+                         latex(intf212(x)))))
+plot([f21(x),intf21(x)],(-5,5),
+     legend_label='automatic',gridlines=True,
+     detect_poles=True,ymin=-50,ymax=50)
+</script></div><br/>
+<div class="sage"><script type="text/x-sage"># python; task 2
+import sympy as sp
+
+</script></div><br/>
+  <h2>Task 3</h2>
+<div class="sage"><script type="text/x-sage"># sage; task 3 
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+var('x,t,u'); f21=cos(cos(ln(x)))
+intf21(x)=ii(f21(x),x)
+pretty_print(html(r'$f(x)=%s => \int f(x) dx= %s$'\
+                  %(latex(f21(x)),latex(intf21(x)))))
+# u=cos(ln(x)) => x=e^arccos(u), u'=-sin(log(x))/x => 
+# du=u'dx => dx=du/u'=-x*du/sin(ln(x))=
+# =-e^arccos(u)*du/(sqrt(1-cos(ln(x))^2))=
+# =-e^arccos(u)*du/(sqrt(1-u^2))
+# f(x)dx=-cos(u)*du*e^arccos(u)/(sqrt(1-u^2))=
+# =-cos(u)*du*e^arcsin(sqrt(1-u^2))/(sqrt(1-u^2))
+# t=tan(u/2) => cos(u)=(1-t^2)/(1+t^2), du=dt/(1+t^2)
+# => -cos(u)du=(t^2-1)dt/(1+t^2)
+print([solve(u==cos(ln(x)),x),diff(cos(ln(x)),x)])
+</script></div><br/>
+<div class="sage"><script type="text/x-sage"># python; task 3
+import sympy as sp
+
+</script></div><br/>
+  <h2>Task 4</h2>
+<div class="sage"><script type="text/x-sage"># sage; task 4 (#1.21)
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+set_verbose(-1)
+f21(x)=(2*x-5)*cos(4*x); intf21(x)=ii(f21(x),x)
+s1=r'$\int u dv=uv-\int v du, u=2x-5, dv=cos(4x)dx => '
+s2=r'du=(2x-5)\prime dx=2dx, v=\int cos(4x)dx=\frac{sin(4x)}{4}$'
+s3=r'$\int f(x)dx=(2x-5)\frac{sin(4x)}{4}-\int \frac{sin(4x)}{4}2dx='
+s4=r'(2x-5)\frac{sin(4x)}{4}+\frac{1}{2} \frac{cos(4x)}{4}$'
+pretty_print(html(s1+s2)); pretty_print(html(s3+s4))
+pretty_print(html(r'$f(x)=%s => \int f(x) dx= %s$'\
+                  %(latex(f21(x)),latex(intf21(x)))))
+plot([f21(x),intf21(x)],(-5,5),legend_label='automatic',
+     ymin=-15,ymax=15,gridlines=True)
+</script></div><br/> 
+<div class="sage"><script type="text/x-sage"># python; task 4
+import sympy as sp
+
+</script></div><br/> 
+  <h2>Task 5</h2>
+<div class="sage"><script type="text/x-sage"># sage; task 5 (#3.21)
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+set_verbose(-1)
+f21(x)=(2*cos(x)+3*sin(x))/(2*sin(x)-3*cos(x))^3
+intf21(x)=ii(f21(x),x)
+s1=r'$t=2sin(x)-3cos(x) => dt=(2sin(x)-'+\
+   r'3cos(x))\prime dx=(2cos(x)+3sin(x))dx =>$'
+s2=r'$\int f(x)dx=\frac{2cos(x)+3sin(x)}{(2sin(x)-'+\
+   r'3cos(x))^3}dx=\int \frac{dt}{t^3}='
+s3=r'-\frac{1}{2t^2}=-\frac{1}{2(2sin(x)-3cos(x))^2}$'
+pretty_print(html(s1)); pretty_print(html(s2+s3))
+pretty_print(html(r'$f(x)=%s => \int f(x) dx= %s$'\
+                  %(latex(f21(x)),latex(intf21(x)))))
+plot([f21(x),intf21(x)],(-5,5),legend_label='automatic',
+     detect_poles=True,ymin=-5,ymax=5,gridlines=True)
+</script></div><br/>
+<div class="sage"><script type="text/x-sage"># python; task 5
+import sympy as sp
+
+</script></div><br/> 
+   <h2>Cells for Your Experiments</h2>
+<div class="sage"><script type="text/x-sage"># sage 
+</script></div><br/>
+<div class="sage"><script type="text/x-sage"># python / sympy,numpy,pylab
+import sympy,numpy,pylab
+</script></div><br/>
+  </body>
+</html>
