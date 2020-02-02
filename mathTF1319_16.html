@@ -22,60 +22,169 @@
 Find integrals  
   <h2>Task 1</h2>
 <div class="sage"><script type="text/x-sage"># sage; task 1
-from sage.symbolic.integration.integral import indefinite_integral
-set_verbose(-1); f21(x)=(1+sin(x)^2)*cos(x)/(1+sin(x))^2
-intf21(x)=indefinite_integral(f21(x),x)
-s=r'$f(x)=%s => \int f(x) dx= %s$'
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+set_verbose(-1)
+f21(x)=(1+sin(x)^2)*cos(x)/(1+sin(x))^2
+intf21(x)=ii(f21(x),x)
+s=r'$\displaystyle{f(x)=%s => \int f(x) dx= %s}$'
 pretty_print(html(s%(latex(f21(x)),latex(intf21(x)))))
-plot([f21(x),intf21(x)],(-8,10),detect_poles=True,
-     legend_label='automatic',ymin=-10,ymax=10,gridlines=True)
+plot([f21(x),intf21(x)],(-3*pi,3*pi),
+     detect_poles=True,ymin=-10,ymax=10,
+     legend_label='automatic',gridlines=True,
+     frame=True,figsize=(7,5))
 </script></div><br/>
 <div class="sage"><script type="text/x-sage"># python; task 1
-import sympy as sp
-
+import sympy as sp; x=sp.symbols('x')
+sp.init_printing(use_unicode=True)
+f21=(1+sp.sin(x)^2)*sp.cos(x)/(1+sp.sin(x))^2
+intf21=sp.integrate(f21,x).simplify()
+display([f21,intf21])
+sp.pprint(75*'='); xl=3*sp.pi
+col=['#3636ff','#36ff36']
+p=sp.plot(f21,(x,-xl,xl),ylim=(-10,10),
+          line_color=col[0],show=False)
+ip=sp.plot(intf21,(x,-xl,xl),ylim=(-10,10),
+           line_color=col[1],show=False)
+p.extend(ip); p.show()
 </script></div><br/>
   <h2>Task 2</h2>
 <div class="sage"><script type="text/x-sage"># sage; task 2
-from sage.symbolic.integration.integral import indefinite_integral
-# f21(x)=(1+cos(x)+3*sin(x))/(sin(x)+1-cos(2*x)); cos(2*x)=1-2*sin(x)^2
-set_verbose(-1); f21(x)=(1+cos(x)+3*sin(x))/(sin(x)+2*sin(x)^2)
-intf21(x)=simplify(indefinite_integral(f21(x),x))
-s=r'$f(x)=%s => \int f(x) dx= %s$'
-pretty_print(html(s%(latex(f21(x)),latex(intf21(x)))))
-plot([f21(x),intf21(x)],(-2*pi,4*pi),legend_label=['f(x)','F(x)'],
-     detect_poles=True,ymin=-10,ymax=10,gridlines=True)
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+# f21(x)=(1+cos(x)+3*sin(x))/(sin(x)+1-cos(2*x))
+# cos(2*x)=1-2*sin(x)^2
+set_verbose(-1)
+f21(x)=(1+cos(x)+3*sin(x))/(sin(x)+2*sin(x)^2)
+f211(x)=(1+sqrt(1-sin(x)^2)+3*sin(x))/(sin(x)+2*sin(x)^2)
+f212(x)=(1-sqrt(1-sin(x)^2)+3*sin(x))/(sin(x)+2*sin(x)^2)
+intf21(x)=simplify(ii(f21(x),x))
+intf211(x)=simplify(ii(f211(x),x))
+intf212(x)=simplify(ii(f212(x),x))
+s=r'$\displaystyle{f(x)=%s => }$'+\
+  r'<br/>$\displaystyle{\int f(x) dx= %s}$'+\
+  r'<br/>$\displaystyle{f1(x)=%s => }$'+\
+  r'<br/>$\displaystyle{\int f1(x) dx= %s}$'+\
+  r'<br/>$\displaystyle{f2(x)=%s => }$'+\
+  r'<br/>$\displaystyle{\int f2(x) dx= %s}$'
+st=(latex(f21(x)),latex(intf21(x)),
+    latex(f211(x)),latex(intf211(x)),
+    latex(f212(x)),latex(intf212(x)))
+pretty_print(html(s%st))
+plot([f21(x),f211(x),f212(x),
+      intf21(x),intf211(x),intf212(x)],
+     (-2*pi,2*pi),thickness=2,alpha=.5,
+     frame=True,detect_poles=True,
+     legend_label=['f(x)','f1(x)','f2(x)',
+                   'F(x)','F1(x)','F2(x)'],
+     ymin=-15,ymax=15,gridlines=True,figsize=(7,5))
+</script></div><br/>      
+<div class="sage"><script type="text/x-sage"># sage; task 2
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+# f21(x)=(1+cos(x)+3*sin(x))/(sin(x)+1-cos(2*x))
+# cos(2*x)=1-2*sin(x)^2
+set_verbose(-1)
+f21(x)=(1+cos(x)+3*sin(x))/(sin(x)+2*sin(x)^2)
+intf21(x)=simplify(ii(f21(x),x))
+cf21(u)=((1+(1-u^2)/(1+u^2)+3*2*u/(1+u^2))/\
+         (2*u/(1+u^2)+2*(2*u/(1+u^2))^2)*\
+         2/(u^2+1)).factor()
+cintf21(u)=ii(cf21(u),u)
+cintf21(x)=cintf21(u).subs({u:tan(x/2)})
+s=r'$\displaystyle{f(x)=%s => }$'+\
+  r'<br/>$\displaystyle{\int f(x) dx= %s}$'+\
+  r'<br/>$\displaystyle{cF(x)=%s}$'
+pretty_print(html(s%(latex(f21(x)),
+                     latex(intf21(x)),
+                     latex(cintf21(x)))))
+plot([f21(x),intf21(x),cintf21(x)],(-2*pi,2*pi),
+     legend_label=['f(x)','F(x)','cF(x)'],frame=True,
+     detect_poles=True,ymin=-15,ymax=15,
+     gridlines=True,figsize=(7,5))
 </script></div><br/>
 <div class="sage"><script type="text/x-sage"># python; task 2
-import sympy as sp
-
+import sympy as sp; x,u,v=sp.symbols('x,u,v')
+sp.init_printing(use_unicode=True)
+f21=(1+sp.cos(x)+3*sp.sin(x))/(sp.sin(x)+2*sp.sin(x)^2)
+# cos(x)=(1-u**2)/(1+u**2); sin(x)=2*u/(u**2+1)
+# dx=2*du/(u**2+1); f(x)dx=>f(u)du
+f21u1=1+sp.cos(x).subs(sp.cos(x),(1-u**2)/(1+u**2))+\
+      3*sp.sin(x).subs(sp.sin(x),2*u/(u**2+1))
+f21u2=(sp.sin(x)+2*sp.sin(x)^2).subs(sp.sin(x),2*u/(u**2+1))
+f21u=((f21u1/f21u2)*2/(u**2+1)).factor()
+intf21u=sp.integrate(f21u,u).simplify()
+display([f21u,intf21u])
+#u=tan(x/2)
+intf21=intf21u.subs(u,sp.tan(x/2))
+print(75*'='); print(f21) 
+print(intf21.simplify()); print(75*'=') 
+xl=2*sp.pi; col=['#3636ff','#36ff36']
+p=sp.plot(f21,(x,-xl,xl),ylim=(-15,15),
+          line_color=col[0],show=False)
+ip1=sp.plot(intf21,(x,.01,xl/2-.01),ylim=(-15,15),
+           line_color=col[1],show=False)
+ip2=sp.plot(intf21,(x,-xl+.01,-xl/2-.01),ylim=(-15,15),
+           line_color=col[1],show=False)
+p.extend(ip1); p.extend(ip2); p.show()
 </script></div><br/>
   <h2>Task 3</h2>
 <div class="sage"><script type="text/x-sage"># sage; task 3 
-from sage.symbolic.integration.integral import indefinite_integral
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
 set_verbose(-1); f21(x)=cos(4*x)*cos(5*x)
-intf21(x)=indefinite_integral(f21(x),x)
-s=r'$f(x)=%s => \int f(x) dx= %s$'
-pretty_print(html(s%(latex(f21(x)),latex(intf21(x)))))
-plot([f21(x),intf21(x)],(-pi,pi),legend_label='automatic',
-     gridlines=True,ymin=-1.2,ymax=1.2)
+intf21(x)=ii(f21(x),x)
+s=r'$\displaystyle{f(x)=%s => }$'+\
+  r'<br/>$\displaystyle{\int f(x) dx= %s}$'
+pretty_print(html(s%(latex(f21(x)),
+                     latex(intf21(x)))))
+plot([f21(x),intf21(x)],(-pi,pi),
+     legend_label='automatic',frame=True,
+     gridlines=True,ymin=-1.2,ymax=1.2,
+     figsize=(7,5))
 </script></div><br/>
 <div class="sage"><script type="text/x-sage"># python; task 3
-import sympy as sp
-
+import sympy as sp; x=sp.symbols('x')
+sp.init_printing(use_unicode=True)
+f21=sp.cos(4*x)*sp.cos(5*x)
+intf21=sp.integrate(f21,x).simplify()
+display([f21,intf21])
+sp.pprint(75*'='); xl=sp.pi
+col=['#3636ff','#36ff36']
+p=sp.plot(f21,(x,-xl,xl),ylim=(-1.5,1.5),
+          line_color=col[0],show=False)
+ip=sp.plot(intf21,(x,-xl,xl),ylim=(-1.5,1.5),
+           line_color=col[1],show=False)
+p.extend(ip); p.show()
 </script></div><br/>
   <h2>Task 4</h2>
 <div class="sage"><script type="text/x-sage"># sage; task 4 
-from sage.symbolic.integration.integral import indefinite_integral
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
 set_verbose(-1); f21(x)=cos(2*x)^4*sin(2*x)^3
-intf21(x)=indefinite_integral(f21(x),x)
-s=r'$f(x)=%s => \int f(x) dx= %s$'
-pretty_print(html(s%(latex(f21(x)),latex(intf21(x)))))
-plot([f21(x),intf21(x)],(-pi,pi),legend_label='automatic',
-     gridlines=True,ymin=-.12,ymax=.12)
+intf21(x)=ii(f21(x),x)
+s=r'$\displaystyle{f(x)=%s => }$'+\
+  r'<br/>$\displaystyle{\int f(x) dx= %s}$'
+pretty_print(html(s%(latex(f21(x)),
+                     latex(intf21(x)))))
+plot([f21(x),intf21(x)],(-pi,pi),
+     legend_label='automatic',frame=True,
+     gridlines=True,ymin=-.12,ymax=.12,
+     figsize=(7,5))
 </script></div><br/> 
 <div class="sage"><script type="text/x-sage"># python; task 4
-import sympy as sp
-
+import sympy as sp; x=sp.symbols('x')
+sp.init_printing(use_unicode=True)
+f21=sp.cos(2*x)^4*sp.sin(2*x)^3
+intf21=sp.integrate(f21,x).simplify()
+display([f21,intf21])
+sp.pprint(75*'='); xl=sp.pi
+col=['#3636ff','#36ff36']
+p=sp.plot(f21,(x,-xl,xl),ylim=(-.15,.15),
+          line_color=col[0],show=False)
+ip=sp.plot(intf21,(x,-xl,xl),ylim=(-.15,.15),
+           line_color=col[1],show=False)
+p.extend(ip); p.show()
 </script></div><br/>  
    <h2>Cells for Your Experiments</h2>
 <div class="sage"><script type="text/x-sage"># sage 
