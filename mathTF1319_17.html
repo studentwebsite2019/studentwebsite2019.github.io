@@ -22,38 +22,167 @@
 Find integrals  
   <h2>Task 1</h2>
 <div class="sage"><script type="text/x-sage"># sage; task 1
-from sage.symbolic.integration.integral import indefinite_integral
-set_verbose(-1); f21(x)=(x^2*x^(1/3)+2*x^(1/2))/(x+x^(1/2))
-intf21(x)=indefinite_integral(f21(x),x)
-s=r'$f(x)=%s => $'+r'<br/>'+r'$F(x)=\int f(x) dx= %s$'
-pretty_print(html(s%(latex(f21(x)),latex(intf21(x)))))
-plot([f21(x),intf21(x)],(0,10),legend_label=[r'f(x)',r'F(x)'],
-     detect_poles=True,gridlines=True)
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+set_verbose(-1); p=Graphics()
+f21(x)=(x^2*x^(1/3)+2*x^(1/2))/(x+x^(1/2))
+intf21(x)=ii(f21(x),x)
+wintf211(x)=4*sqrt(x)-4*log(sqrt(x)+1)+\
+            3*x^(7/3)/7-6*x^(5/6)/5+3*x^(4/3)/4-\
+            6*x^(11/6)/11+3*x^(1/3)
+wintf212(x)=2*log(x^(1/6)+1)-log(x^(1/3)-x^(1/6)+1)-\
+            2*sqrt(3)*arctan((2*x^(1/6)-1)/sqrt(3))
+G(x)=-2*log(x^(1/6)+1)-5*log(x^(1/3)-x^(1/6)+1)
+WG(x)=2*log(x^(1/6)+1)-\
+      log(x^(1/3)-x^(1/6)+1)-4*log(sqrt(x)+1)
+st=r'$\displaystyle{f(x)=%s}$'+r'<br/><br/>'+\
+   r'$F(x)=\int f(x)\;dx=%s$<br/>$%s$'+r'<br/>'+\
+   r'$\displaystyle{WF(x)=%s-}$'+r'<br/>'+\
+   r'$\displaystyle{%s}$'+r'<br/><br/>'+\
+   r'$\displaystyle{G(x)=%s}$'+r'<br/>'+\
+   r'$\displaystyle{WG(x)=%s}$'
+stf=(latex(f21(x)),str(latex(intf21(x)))[:167],
+     str(latex(intf21(x)))[166:],
+     latex(wintf211(x)),latex(wintf212(x)),
+     latex(G(x)),latex(WG(x)))
+pretty_print(html(st%stf))
+f=[f21(x),intf21(x),G(x),wintf211(x)+wintf212(x),WG(x)]
+ll=[r'f(x)',r'F(x)',r'G(x)',r'WF(x)',r'WG(x)']
+ls=['-','-','-',':',':']
+for i in range(5):
+    p+=plot(f[i],(0,10),thickness=3,alpha=.4+.1*i,
+            color=colormaps.hsv(.22*i)[:3],
+            legend_label=ll[i],linestyle=ls[i])
+p.show(gridlines=True,figsize=(7,5),frame=True)
 </script></div><br/>
-<div class="sage"><script type="text/x-sage"># python; task 1
+<a href="https://www.wolframalpha.com/input/?i=integrate+%28x%5E2*x%5E%281%2F3%29%2B2*x%5E%281%2F2%29%29%2F%28x%2Bx%5E%281%2F2%29%29dx">&#x1F300; &nbsp; WolframAlpha: integrate (x^2*x^(1/3)+2*x^(1/2))/(x+x^(1/2))dx </a><br/>   
+<img src="https://olgabelitskaya.github.io/mathTF1319_17.jpeg" alt="WolframAlpha result" width="800" height="400">
+<div class="sage"><script type="text/x-sage">
+%%html
+<p>$\mathbb{latex\;\;task\;1}$</p>
+<p>$\displaystyle{\int \frac{x^2\sqrt[3]{x}+2\sqrt{x}}{x+\sqrt{x}} dx =
+\frac{3x^{\frac{7}{3}}}{7}-\frac{6x^\frac{5}{6}}{5}+\frac{3x^\frac{4}{3}}{4}-
+\frac{6 x^\frac{11}{6}}{1}+4\sqrt{x}+3\sqrt[3]{x}-
+2\sqrt{3}\tan^{-1}\bigg(\frac{2\sqrt[6]{x}-1}{\sqrt{3}}\bigg)+}$</p>
+<p>$\displaystyle{+2\log{(\sqrt[6]{x}+1)}-
+\log{(\sqrt[3]{x}-\sqrt[6]{x}+1)-4\log{(\sqrt{x}+1)}}+constant}$</p>
+</script></div><br/> 
+<p>f(x)=(x^(7/3)+2*x^(1/2))/(x+x^(1/2))=2*x^(1/2)/(x+x^(1/2))+g(x)</p>
+<p>u=x^(1/6); u'=1/(6*x^(5/6))=> du=dx/(6*x^(5/6))</p>
+<p>g(x)=x^(7/3)/(x+x^(1/2))=u^14/(u^6+u^3); dx=(6*u^5)*du</p>
+<p>g(x) dx=(((u^14/(u^6+u^3))*(6*u^5))*du+</p>
+<p>+(2*(u+1)/(u^2-u+1)-2*(u+1)/(u^2-u+1))*du</p>
+<p>h(u)=-2*(u+1)/(u^2-u+1))=(1-2*u)/(u^2-u+1)-3/(u^2-u+1)=(1-2*u)/(u^2-u+1)+s(u)</p>
+<p>v=(u-1/2)*2/sqrt(3); u=sqrt(3)*v/2+1/2; du=sqrt(3)*dv/2</p>
+<p>s(u)=-3/(u^2-u+1)=-3/((sqrt(3)*v/2+1/2)^2-sqrt(3)*v/2-1/2+1)=-4/(v^2+1)</p>
+<p>s(u)du=(-2*sqrt(3)/(v^2+1))*dv</p>
+<div class="link"><script type="text/x-sage"># python; task 1
 import sympy as sp
-
+sp.init_printing(use_unicode=True) 
+x,u,v=sp.symbols('x,u,v')
+s=r'$\displaystyle{f(x)}'+30*r'='+r'=>\int f(x)dx$'
+display(html(s)); print(70*'=')
+def fd(f,intf,n):
+    s=r'$\displaystyle{'+sp.latex(f)+\
+        '===>'+sp.latex(intf)+'}$'
+    display(html(s)); print(n*'=') 
+f21=(x**(7/3)+2*sp.sqrt(x))/(x+sp.sqrt(x))
+intf21=sp.integrate(f21,x,manual=True)
+fd(f21,intf21,70)
+f211=x**(7/3)/(x+sp.sqrt(x))
+intf211=sp.integrate(f211,x,manual=True)
+fd(f211,intf211,70)
+f212=int(2)*sp.sqrt(x)/(x+sp.sqrt(x))
+intf212=sp.integrate(f212,x,manual=True)
+fd(f212,intf212,70)
+p=sp.plot(f21,(x,.01,10),
+          show=False,line_color=(.1,.1,.7))
+p.extend(sp.plot(f211,(x,.01,10),show=False))
+p.extend(sp.plot(f212,(x,.01,10),show=False))
+p.show()
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># python; task 1
+s=r'$\displaystyle{f(u)}'+50*r'='+r'=>\int f(u)\;du$'
+display(html(s)); print(120*'=')
+fu211=((f211*6*x**(5/6)).subs({x**(1/6):u})).simplify()
+intfu211=sp.integrate(fu211,u,manual=True)
+fd(fu211,intfu211,120)
+fu2111=-int(2)*(u+1)/(u**2-u+1)
+intfu2111=sp.integrate(fu2111,u,manual=True)
+fd(fu2111,intfu2111,120)
+fu2112=(fu211-fu2111).simplify().factor()
+intfu2112=sp.integrate(fu2112,u,manual=True)
+fd(fu2112,intfu2112,120)
+fu21111=-(int(2)*u-1)/(u**2-u+1)
+intfu21111=sp.integrate(fu21111,u,manual=True)
+fd(fu21111,intfu21111,120)
+fu21112=(fu2111-fu21111).simplify()
+intfu21112=sp.integrate(fu21112,u,manual=True)
+fd(fu21112,intfu21112,120)
+fv21112=(sp.sqrt(3)/2*fu21112\
+         .subs({u:sp.sqrt(3)*v/2+1/2})).simplify()
+intfv21112=sp.integrate(fv21112,v,manual=True)
+fd(fv21112,intfv21112,120)
+intfu21112=intfv21112.subs({v:(u-1/2)*2/sp.sqrt(3)})
+fd(fu21112,intfu21112,120)
+intfu211=intfu2112+intfu21111+intfu21112
+fd(fu211,intfu211,120)
+p=sp.plot(intfu2112,(u,.1,1.1),
+          show=False,line_color=(.1,.1,.7))
+p.extend(sp.plot(intfu2112+intfu21111,(u,.1,1.1),show=False))
+p.extend(sp.plot(intfu211,(u,.1,1.1),show=False))
+p.show()
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># python; task 1
+s=r'$\displaystyle{f(x)'+50*r'='+r'=>\int f(x)\;dx}$'
+display(html(s)); print(120*'='); print()
+intf21=intf212+intfu211.subs({u:x**(1/6)})
+fd(f21,intf21,120)
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+var('x')
+f21sm(x)=(x^2*x^(1/3)+2*x^(1/2))/(x+x^(1/2))
+intf21sm(x)=ii(f21sm(x),x)
+st=r'$\displaystyle{f(x)=%s}$'+r'<br/><br/>'+\
+   r'$F(x)=\int f(x)\;dx=%s$'
+pretty_print(html(st%(latex(f21sm(x)),
+                      latex(intf21sm(x)))))
+p=sp.plot(f21,(x,.1,10),
+          show=False,line_color=(.1,.1,.7))
+p.extend(sp.plot(intf21,(x,.1,10),show=False))
+p.show()
 </script></div><br/>
   <h2>Task 2</h2>
 <div class="sage"><script type="text/x-sage"># sage; task 2
-from sage.symbolic.integration.integral import indefinite_integral
-set_verbose(-1); f21(x)=x^2/(x^2-2*x+4)/(2+2*x-x^2)^(1/2)
-intf21(x)=simplify(indefinite_integral(f21(x),x))
-s=r'$f(x)=%s =>$<br/>$F(x)=\int f(x) dx= %s$<br/>$-%s$<br/>$+%s$'
-pretty_print(html(s%(latex(f21(x)),str(latex(intf21(x)))[:141],
-                 str(latex(intf21(x)))[141:449],str(latex(intf21(x)))[449:])))
-plot([f21(x),intf21(x)],(-1,3),legend_label=[r'f(x)',r'F(x)'],
+from sage.symbolic.integration.integral \
+import indefinite_integral as ii
+set_verbose(-1)
+f21(x)=x^2/(x^2-2*x+4)/(2+2*x-x^2)^(1/2)
+intf21(x)=simplify(ii(f21(x),x))
+st=r'$\displaystyle{f(x)=%s=>}$<br/>$F(x)='+\
+   r'\int f(x)\;dx=%s$<br/>$-%s$<br/>$+%s$'
+stf=(latex(f21(x)),str(latex(intf21(x)))[:141],
+     str(latex(intf21(x)))[141:449],
+     str(latex(intf21(x)))[449:])
+pretty_print(html(st%stf))
+plot([f21(x),intf21(x)],(-1,3),
+     legend_label=[r'f(x)',r'F(x)'],
      detect_poles=True,gridlines=True)
 </script></div><br/>
-<div class="sage"><script type="text/x-sage"># python; task 2
+<div class="link"><script type="text/x-sage"># python; task 2
 import sympy as sp
+sp.init_printing(use_unicode=True) 
+x,u,v=sp.symbols('x,u,v')
 
 </script></div><br/>
    <h2>Cells for Your Experiments</h2>
 <div class="sage"><script type="text/x-sage"># sage 
 </script></div><br/>
-<div class="sage"><script type="text/x-sage"># python / sympy,numpy,pylab
+<div class="link"><script type="text/x-sage"># python / sympy,numpy,pylab
 import sympy,numpy,pylab
+</script></div><br/>
+<div class="link"><script type="text/x-sage"># python / sympy,numpy,pylab
+
 </script></div><br/>
   </body>
 </html>
