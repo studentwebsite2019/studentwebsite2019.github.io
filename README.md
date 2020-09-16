@@ -44,9 +44,6 @@ SageMathCell<br/><br/>
 
 </details><br/><br/>
 
-### 📑 Physics
-
-### 📑 Chemistry
 <br/><br/>
 
 <h1>🏙 &nbsp; Home Website Sources</h1>
