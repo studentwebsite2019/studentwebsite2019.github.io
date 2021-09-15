@@ -7,8 +7,6 @@
 <details>
 <summary>📑 Maths</summary><br/><br/>
   
-Wolfram Cloud<br/><br/>
-<a href="https://studentwebsite2019.github.io/mathTF1319W.html">🌀 Standard Calculations</a><br/><br/>
 Google Colaboratory<br/>     
 <a href="https://colab.research.google.com/drive/1MT0iq9l_Hzeh6FTbicvLuVdvNbV6J82p">📓 Standard Calculations. Part 1</a><br/>
 <a href="https://colab.research.google.com/drive/1VF7zOPBWvfhnfUXfOgSgLnz65MiC4ULh">📓 Standard Calculations. Part 2</a><br/><br/>
@@ -31,9 +29,7 @@ SageMathCell<br/><br/>
 
 <details>
 <summary>📑 IT</summary><br/><br/>  
-  
-Wolfram Cloud<br/><br/>
-<a href="https://studentwebsite2019.github.io/itTF1319W.html">🌀 Standard Calculations</a><br/><br/>
+
 Google Colaboratory<br/>     
 <a href="https://colab.research.google.com/drive/1c1iJqa66AdXCwUru2aRfbAg4j-CGLVRe">📓 Standard Calculations</a><br/><br/>
 SageMathCell<br/><br/>
